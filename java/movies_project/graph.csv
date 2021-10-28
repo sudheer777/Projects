@@ -1,0 +1,6 @@
+node1,node2,cost_in_rupees,time_taken_in_sec
+a1,a2,9,120
+a1,a3,15,100
+a2,a3,5,10
+a3,a4,10,5
+a1,a5,18,115
