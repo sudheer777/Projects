@@ -9,53 +9,18 @@ import org.apache.spark.sql.functions.{col, input_file_name, lit}
 
 object Main {
 
-  val fileSchema: StructType = StructType(Seq(
-    StructField("name", StringType, nullable = true),
-    StructField("id", IntegerType, nullable = true),
-    StructField("nametype", StringType, nullable = true),
-    StructField("recclass", StringType, nullable = true),
-    StructField("mass", DoubleType, nullable = true),
-    StructField("fall", StringType, nullable = true),
-    StructField("year", StringType, nullable = true),
-    StructField("reclat", DoubleType, nullable = true),
-    StructField("reclong", DoubleType, nullable = true),
-    StructField("geolocation", StructType(
-      Seq(
-        StructField("latitude", DoubleType, nullable = false),
-        StructField("longitude", DoubleType, nullable = false)
-      )
-    )),
-    StructField(":@computed_region_cbhk_fwbd", IntegerType, nullable = false),
-    StructField(":@computed_region_nnqa_25f4", IntegerType, nullable = false)
-  ))
-
-  def setHadoopConf(sc: SparkContext): Unit = {
-    sc.hadoopConfiguration.set("fs.s3a.aws.credentials.provider", "org.apache.hadoop.fs.s3a.AnonymousAWSCredentialsProvider")
-  }
-
-  def doValidation(df: DataFrame, columns: Seq[String]): DataFrame = {
-    var f = df
-    for (c <- columns) f = f.filter(col(c).isNotNull)
-    f
-  }
-
-  def averageMassOfaMeteor(df: DataFrame): Double = {
-    val (sum, count) = df.rdd.map(z => (z.getDouble(4), 1)).reduce((x, y) => (x._1 + y._1, x._2 + y._2))
-    sum / count
-  }
-
   def averageMassOfaMeteor(rdd: RDD[MeteoricCfg.MeteoricRecord]): Double = {
-    val (sum, count) = rdd.map(z => (z.mass.get, 1L)).reduce((x, y) => (x._1 + y._1, x._2 + y._2))
+    val (sum, count) = rdd
+      .map(z => (z.mass.get, 1L))
+      .reduce((x, y) => (x._1 + y._1, x._2 + y._2))
     sum / count
-  }
-
-  def highestNumberOfMeteors(df: DataFrame): String = {
-    val h = df.rdd.map(z => (z.getString(6), 1)).reduceByKey(_ + _).reduce((x, y) => if (x._2 > y._2) x else y)
-    h._1
   }
 
   def highestNumberOfMeteors(rdd: RDD[MeteoricCfg.MeteoricRecord]): String = {
-    val h = rdd.map(z => (z.year.get, 1)).reduceByKey(_ + _).reduce((x, y) => if (x._2 > y._2) x else y)
+    val h = rdd
+      .map(z => (z.year.get, 1))
+      .reduceByKey(_ + _)
+      .reduce((x, y) => if (x._2 > y._2) x else y)
     h._1
   }
 
@@ -84,7 +49,6 @@ object Main {
     val bld = SparkSession.builder().appName("SAMPLE APP").config("spark.master", "local[*]")
     val ss = bld.getOrCreate()
     val sc = ss.sparkContext
-    setHadoopConf(sc)
     val sqlContext = new SQLContext(sc)
     try {
       doWork(sqlContext)
