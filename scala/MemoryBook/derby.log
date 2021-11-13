@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Jul 13 13:03:28 IST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017a-9ec8-f6bd-00000d25aa20 
+on database directory /Users/sudheer/workspace/sudheer/Projects/scala/MemoryBook/myDB with class loader sun.misc.Launcher$AppClassLoader@45ee12a7 
+Loaded from file:/Users/sudheer/workspace/sudheer/Projects/scala/MemoryBook/target/bg-jobs/sbt_56beaa36/target/4b3959eb/0b708d5e/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_112-b16
+user.dir=/Users/sudheer/workspace/sudheer/Projects/scala/MemoryBook
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.10.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
