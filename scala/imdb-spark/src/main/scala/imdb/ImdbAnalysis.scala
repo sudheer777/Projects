@@ -45,22 +45,9 @@ object ImdbAnalysis {
       .groupBy(_._1)
       // grouping all the data for each genre.. comedy
       .map(x => {
-      var maxRt = Int.MinValue
-      var minRt = Int.MaxValue
-      var sum: Int = 0
-      val mvs = x._2.toArray
-      mvs.foreach(rt => {
-        val r = rt._2
-        sum += r
-        if (r > maxRt) {
-          maxRt = r
-        }
-        if (r < minRt) {
-          minRt = r
-        }
-      })
-      val avg = 1F * sum / mvs.length
-      (avg, minRt, maxRt, x._1)
+      val mvs = x._2.toArray.map(_._2)
+      val avg = 1F * mvs.sum / mvs.length
+      (avg, mvs.min, mvs.max, x._1)
     })
   }
 
@@ -98,18 +85,7 @@ object ImdbAnalysis {
         genres.map(genre => ((genre, decade), (primaryTitle, rating)))
     }).groupByKey()
       .map(x => {
-        var topRatedMovie: String = null
-        var maxRating = Float.MinValue
-        x._2.foreach(mr => {
-          if (mr._2 == maxRating) {
-            if (mr._1 < topRatedMovie) {
-              topRatedMovie = mr._1
-            }
-          } else if (mr._2 > maxRating) {
-            maxRating = mr._2
-            topRatedMovie = mr._1
-          }
-        })
+        val topRatedMovie: String = x._2.toArray.minBy(y => (-y._2, y._1))._1
         (x._1._2, x._1._1, topRatedMovie)
       }).sortBy(x => (x._1, x._2))
   }
