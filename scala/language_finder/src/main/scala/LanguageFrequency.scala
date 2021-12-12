@@ -7,7 +7,7 @@ import java.io.{BufferedReader, InputStreamReader}
 
 object LanguageFrequency {
   def main(args: Array[String]): Unit = {
-    val folder = if (args.length == 1) args.head else "books/*"
+    val folder = if (args.length == 1) args.head else "books/*.txt"
     // remove .setMaster("local[*]") in below line when running in cluster mode
     val sc = new SparkConf().setAppName("LanguageFrequency").setMaster("local[*]")
     val sparkContext = new SparkContext(sc)
@@ -33,7 +33,7 @@ object LanguageFrequency {
       while (line != null) {
         val words = line.toLowerCase()
           .split(" ")
-          .map(word => word.trim.replaceAll(".", "").replaceAll(",", ""))
+          .map(word => word.trim.replaceAll("\\.", "").replaceAll(",", ""))
           .filter(_.nonEmpty)
         for (word <- words) {
           if (englishWordsSet.contains(word)) englishCount += 1
@@ -43,6 +43,7 @@ object LanguageFrequency {
         total += words.length
         line = fin.readLine()
       }
+      fin.close()
       val bookLanguage = if (englishCount > frenchCount && englishCount > germanCount)
         "English"
       else if (frenchCount > germanCount)
@@ -51,6 +52,7 @@ object LanguageFrequency {
         "German"
       (bookLanguage, total)
     })
+    books.collect().foreach(println)
     books
       .reduceByKey(_ + _)
       .sortBy(-_._2)
