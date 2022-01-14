@@ -1,0 +1,533 @@
+{
+  "type": "record",
+  "name": "shared_cart_checked_out",
+  "namespace": "schemas.carting",
+  "fields": [
+    {
+      "name": "created_at",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-millis"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "carts",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": [
+            "null",
+            {
+              "type": "record",
+              "name": "carts",
+              "namespace": ".carts",
+              "fields": [
+                {
+                  "name": "cart_id",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_diner_id",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_diner_email",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_lines_diner_total",
+                  "type": [
+                    "null",
+                    "long"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_lines_total",
+                  "type": [
+                    "null",
+                    "long"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_lines",
+                  "type": [
+                    "null",
+                    {
+                      "type": "array",
+                      "items": [
+                        "null",
+                        {
+                          "type": "record",
+                          "name": "cart_lines",
+                          "namespace": ".carts.cart_lines",
+                          "fields": [
+                            {
+                              "name": "cart_line_apply_free_grub",
+                              "type": [
+                                "boolean",
+                                "null"
+                              ],
+                              "default": false
+                            },
+                            {
+                              "name": "cart_line_category_id",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_category_name",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_combinable_with_coupons",
+                              "type": [
+                                "boolean",
+                                "null"
+                              ],
+                              "default": false
+                            },
+                            {
+                              "name": "cart_line_item_base_price",
+                              "type": [
+                                "null",
+                                "long"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_item_coupon",
+                              "type": [
+                                "boolean",
+                                "null"
+                              ],
+                              "default": false
+                            },
+                            {
+                              "name": "cart_line_item_description",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_item_id",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_item_name",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_item_options",
+                              "type": [
+                                "null",
+                                {
+                                  "type": "array",
+                                  "items": [
+                                    "string",
+                                    "null"
+                                  ]
+                                }
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_item_price",
+                              "type": [
+                                "null",
+                                "long"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_item_quantity",
+                              "type": [
+                                "null",
+                                "int"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_item_tax",
+                              "type": [
+                                "null",
+                                "double"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_item_type",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_special_instructions",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_uuid",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_minimum_serving_size",
+                              "type": [
+                                "null",
+                                "int"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_maximum_serving_size",
+                              "type": [
+                                "null",
+                                "int"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_minimum_order_quantity",
+                              "type": [
+                                "null",
+                                "int"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_serving_size",
+                              "type": [
+                                "null",
+                                "int"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "cart_line_packaging_options",
+                              "type": [
+                                "null",
+                                {
+                                  "type": "array",
+                                  "items": [
+                                    "string",
+                                    "null"
+                                  ]
+                                }
+                              ],
+                              "default": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_restaurant_id",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "chain_id",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "brand_id",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_restaurant_uuid",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_restaurant_name",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_managed_delivery_restaurant",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ],
+                  "default": false
+                },
+                {
+                  "name": "cart_state",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "group_type",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "group_payment_mode",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "catering_info",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "ordering_eta",
+                  "type": [
+                    "null",
+                    {
+                      "type": "long",
+                      "logicalType": "timestamp-millis"
+                    }
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "ordering_send_time",
+                  "type": [
+                    "null",
+                    {
+                      "type": "long",
+                      "logicalType": "timestamp-millis"
+                    }
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "status",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "order_grand_total",
+                  "type": [
+                    "null",
+                    "long"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "affiliate",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "fraud",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ],
+                  "default": false
+                },
+                {
+                  "name": "test",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ],
+                  "default": false
+                },
+                {
+                  "name": "asap",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ],
+                  "default": false
+                },
+                {
+                  "name": "group",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ],
+                  "default": false
+                },
+                {
+                  "name": "group_admin",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ],
+                  "default": false
+                },
+                {
+                  "default": null,
+                  "name": "submission_time",
+                  "type": [
+                    "null",
+                    {
+                      "type": "long",
+                      "logicalType": "timestamp-millis"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "diner_id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "group_id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "group_fulfillment_type",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "order_number",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "order_placed_at",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-millis"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "session_email",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "session_first_name",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "session_last_name",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "when_for",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-millis"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "cart_id",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  ]
+
+}

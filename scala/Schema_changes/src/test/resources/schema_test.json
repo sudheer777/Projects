@@ -1,0 +1,991 @@
+{
+  "type": "record",
+  "name": "topLevelRecord",
+  "fields": [
+    {
+      "name": "created_at",
+      "type": [
+        {
+          "type": "long",
+          "logicalType": "timestamp-millis"
+        },
+        "null"
+      ]
+    },
+    {
+      "name": "action",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    {
+      "name": "metadata",
+      "type": [
+        {
+          "type": "record",
+          "name": "metadata",
+          "namespace": ".metadata",
+          "fields": [
+            {
+              "name": "cart_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "group_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "brand",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "asap",
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "default": false
+            },
+            {
+              "name": "diner_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "when_for",
+              "type": [
+                {
+                  "type": "long",
+                  "logicalType": "timestamp-millis"
+                },
+                "null"
+              ]
+            },
+            {
+              "name": "group_type",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "application_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "restaurant_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "test",
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "default": false
+            },
+            {
+              "name": "request_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "tracking_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          ]
+        },
+        "null"
+      ]
+    },
+    {
+      "name": "charges",
+      "type": [
+        {
+          "type": "record",
+          "name": "charges",
+          "namespace": ".charges",
+          "fields": [
+            {
+              "name": "diner_subtotal",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "lines",
+              "type": [
+                {
+                  "type": "array",
+                  "items": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "null"
+              ]
+            },
+            {
+              "name": "tip",
+              "type": [
+                {
+                  "type": "record",
+                  "name": "tip",
+                  "namespace": ".charges.tip",
+                  "fields": [
+                    {
+                      "name": "type",
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "amount",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    }
+                  ]
+                },
+                "null"
+              ]
+            },
+            {
+              "name": "fees",
+              "type": [
+                {
+                  "type": "record",
+                  "name": "fees",
+                  "namespace": ".charges.fees",
+                  "fields": [
+                    {
+                      "name": "total",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "delivery",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "minimum_based_delivery",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "service",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "itemized_delivery_fees",
+                      "type": [
+                        {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "record",
+                              "name": "itemized_delivery_fees",
+                              "namespace": ".charges.fees.itemized_delivery_fees",
+                              "fields": [
+                                {
+                                  "name": "amount",
+                                  "type": [
+                                    "int",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "group",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "type",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "attribution",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "operation",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "operation_magnitude",
+                                  "type": [
+                                    "double",
+                                    "null"
+                                  ]
+                                }
+                              ]
+                            },
+                            "null"
+                          ]
+                        },
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "itemized_service_fees",
+                      "type": [
+                        {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "record",
+                              "name": "itemized_service_fees",
+                              "namespace": ".charges.fees.itemized_service_fees",
+                              "fields": [
+                                {
+                                  "name": "amount",
+                                  "type": [
+                                    "int",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "group",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "type",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "attribution",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "operation",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "operation_magnitude",
+                                  "type": [
+                                    "double",
+                                    "null"
+                                  ]
+                                }
+                              ]
+                            },
+                            "null"
+                          ]
+                        },
+                        "null"
+                      ]
+                    }
+                  ]
+                },
+                "null"
+              ]
+            },
+            {
+              "name": "taxes",
+              "type": [
+                {
+                  "type": "record",
+                  "name": "taxes",
+                  "namespace": ".charges.taxes",
+                  "fields": [
+                    {
+                      "name": "total",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "sales",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "delivery",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "minimum_based_delivery",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "service",
+                      "type": [
+                        "int",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "itemized_fee_taxes",
+                      "type": [
+                        {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "record",
+                              "name": "itemized_fee_taxes",
+                              "namespace": ".charges.taxes.itemized_fee_taxes",
+                              "fields": [
+                                {
+                                  "name": "amount",
+                                  "type": [
+                                    "int",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "fee_type",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "name": "fee_attribution",
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                }
+                              ]
+                            },
+                            "null"
+                          ]
+                        },
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "adjustment",
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  ]
+                },
+                "null"
+              ]
+            },
+            {
+              "name": "donations_total",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "diner_grand_total",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "grand_total",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "restaurant_total",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "merchant_subtotal",
+              "type": [
+                "null",
+                "int"
+              ],
+              "default": null
+            },
+            {
+              "name": "dmp_grubhub_margin_tax_total",
+              "type": [
+                "null",
+                "int"
+              ],
+              "default": null
+            }
+          ]
+        },
+        "null"
+      ]
+    },
+    {
+      "name": "payments",
+      "type": [
+        {
+          "type": "record",
+          "name": "payments",
+          "namespace": ".payments",
+          "fields": [
+            {
+              "name": "total",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "payments",
+              "type": [
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "record",
+                      "name": "payments",
+                      "namespace": ".payments.payments",
+                      "fields": [
+                        {
+                          "name": "id",
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        {
+                          "name": "payment_id",
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        {
+                          "name": "type",
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        {
+                          "name": "amount",
+                          "type": [
+                            "int",
+                            "null"
+                          ]
+                        },
+                        {
+                          "name": "gl_account_name",
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        {
+                          "name": "intacct_account_map_id",
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        {
+                          "name": "payment_status",
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        {
+                          "default": null,
+                          "name": "amounts",
+                          "type": [
+                            {
+                              "type": "array",
+                              "items": [
+                                {
+                                  "type": "record",
+                                  "name": "amounts",
+                                  "namespace": ".payments.payments.amounts",
+                                  "fields": [
+                                    {
+                                      "name": "amount_event_id",
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    {
+                                      "name": "amount",
+                                      "type": [
+                                        "int",
+                                        "null"
+                                      ]
+                                    },
+                                    {
+                                      "default": null,
+                                      "name": "payment_attributions",
+                                      "type": [
+                                        {
+                                          "type": "array",
+                                          "items": [
+                                            {
+                                              "type": "record",
+                                              "name": "payment_attributions",
+                                              "namespace": ".payments.payments.amounts.payment_attributions",
+                                              "fields": [
+                                                {
+                                                  "name": "amount",
+                                                  "type": [
+                                                    "int",
+                                                    "null"
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "gl_account_name",
+                                                  "type": [
+                                                    "string",
+                                                    "null"
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "payment_source",
+                                                  "type": [
+                                                    "string",
+                                                    "null"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "null"
+                                          ]
+                                        },
+                                        "null"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "null"
+                              ]
+                            },
+                            "null"
+                          ]
+                        }
+                      ]
+                    },
+                    "null"
+                  ]
+                },
+                "null"
+              ]
+            }
+          ]
+        },
+        "null"
+      ]
+    },
+    {
+      "name": "fulfillment_info",
+      "type": [
+        {
+          "type": "record",
+          "name": "fulfillment_info",
+          "namespace": ".fulfillment_info",
+          "fields": [
+            {
+              "name": "fulfillment_type",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "delivery_info",
+              "type": [
+                {
+                  "type": "record",
+                  "name": "delivery_info",
+                  "namespace": ".fulfillment_info.delivery_info",
+                  "fields": [
+                    {
+                      "name": "latitude",
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "longitude",
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    {
+                      "name": "coordinate_id",
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "handoff_options",
+                      "type": [
+                        "null",
+                        {
+                          "type": "array",
+                          "items": [
+                            "string",
+                            "null"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "default": null,
+                      "name": "delivery_type",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  ]
+                },
+                "null"
+              ]
+            },
+            {
+              "default": null,
+              "name": "handoff_options",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": [
+                    "string",
+                    "null"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "null"
+      ]
+    },
+    {
+      "name": "ordering_info_type",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    {
+      "name": "line",
+      "type": [
+        {
+          "type": "record",
+          "name": "line",
+          "namespace": ".line",
+          "fields": [
+            {
+              "name": "id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "menu_item_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "name",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "category_name",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "menu_category_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "description",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "base_price",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "price",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "display_price",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "quantity",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "diner_total",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "total",
+              "type": [
+                "int",
+                "null"
+              ]
+            },
+            {
+              "name": "special_instructions",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "tax",
+              "type": [
+                "double",
+                "null"
+              ]
+            },
+            {
+              "name": "apply_free_grub",
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "default": false
+            },
+            {
+              "name": "unique_key",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "restaurant_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "combinable_with_coupons",
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "default": false
+            },
+            {
+              "name": "item_type",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "item_tags",
+              "type": [
+                {
+                  "type": "array",
+                  "items": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "null"
+              ]
+            },
+            {
+              "name": "variation_id",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            {
+              "name": "item_coupon",
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "default": false
+            },
+            {
+              "name": "options",
+              "type": [
+                {
+                  "type": "array",
+                  "items": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "null"
+              ]
+            },
+            {
+              "name": "merchant_total",
+              "type": [
+                "null",
+                "int"
+              ],
+              "default": null
+            },
+            {
+              "default": null,
+              "name": "packaging_options",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": [
+                    "string",
+                    "null"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "null"
+      ]
+    },
+    {
+      "name": "validation_errors",
+      "type": [
+        {
+          "type": "array",
+          "items": [
+            {
+              "type": "record",
+              "name": "validation_errors",
+              "namespace": ".validation_errors",
+              "fields": [
+                {
+                  "name": "property",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                {
+                  "name": "message_key",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              ]
+            },
+            "null"
+          ]
+        },
+        "null"
+      ]
+    }
+  ]
+}
