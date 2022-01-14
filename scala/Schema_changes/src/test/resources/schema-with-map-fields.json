@@ -1,0 +1,119 @@
+{
+  "type":"record",
+  "doc":"This is the schema that defines the market_state_metrics table. Each entry is for a region and contains multiple metrics (keyed by metricType) and is reported every 2 minutes (currently) for each region. New metrics are always being added, see https://ghdocs.gs.com/architecture/systems/delivery/market-state/metrics for the complete list of metrics being computed",
+  "name":"market_state_metrics",
+  "namespace":"com.gs.gdpschemautils.schemas.market_state_market_state_metrics",
+  "fields":[
+    {
+      "name":"metric_map",
+      "doc":"A map of metric type to metric data",
+      "type":[
+        "null",
+        {
+          "type":"map",
+          "values":["null",{
+            "type":"record",
+            "name":"metric_map",
+            "namespace":".metric_map",
+            "doc":"The actual, target, and expected data for a metric",
+            "fields":[
+              {
+                "name":"actual",
+                "doc":"The actual or real current value for this metric (set for most metrics)",
+                "type":[
+                  "null",
+                  {
+                    "type":"double",
+                    "java-class":"java.lang.Double"
+                  }
+                ]
+              },
+              {
+                "name":"expected",
+                "doc":"What we expect or predict a metric should be (only set for some metrics)",
+                "type":[
+                  "null",
+                  {
+                    "type":"double",
+                    "java-class":"java.lang.Double"
+                  }
+                ]
+              },
+              {
+                "name":"system_confidence_level",
+                "doc":"DEPRECATED how confident the system is in the metric value",
+                "type":[
+                  "null",
+                  {
+                    "type":"double",
+                    "java-class":"java.lang.Double"
+                  }
+                ]
+              },
+              {
+                "name":"target",
+                "doc":"What we want the metric to be (ex. # of open blocks)",
+                "type":[
+                  "null",
+                  {
+                    "type":"double",
+                    "java-class":"java.lang.Double"
+                  }
+                ]
+              },
+              {
+                "name":"time",
+                "doc":"The time the metric was created",
+                "type":[
+                  "null",
+                  {
+                    "type":"string",
+                    "java-class":"java.lang.String"
+                  }
+                ]
+              },
+              {
+                "name":"new_act_time",
+                "doc":"The actual or real current value for this metric (set for most metrics)",
+                "type":[
+                  "null",
+                  {
+                    "type":"double",
+                    "java-class":"java.lang.Double"
+                  }
+                ]
+              }
+            ]
+          }],
+          "java-key-class":"com.gs.market.state.domain.MetricType"
+        }
+      ]
+    },
+    {
+      "name":"region_id",
+      "doc":"The GHD region for which these metrics are associated with",
+      "type":[
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name":"event_time",
+      "doc":"The time when these metrics were created",
+      "type":[
+        "null",
+        {
+          "type":"long",
+          "logicalType":"timestamp-millis"
+        }
+      ],
+      "default":null
+    },
+    {
+      "name":"event_id",
+      "doc":"eventhub event id",
+      "type":["null","string"],
+      "default":null
+    }
+  ]
+}
