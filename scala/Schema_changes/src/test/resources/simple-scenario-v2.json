@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "diner_tags",
+  "namespace": "com.grubhub.gdpschemautils.schemas.diners_events",
+  "fields": [
+    {
+      "name": "udid",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "event_type",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}

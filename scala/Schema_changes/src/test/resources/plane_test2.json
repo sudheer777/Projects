@@ -1,0 +1,167 @@
+{
+  "type": "record",
+  "name": "resolve_flow_event",
+  "namespace": "com.grubhub.gdpschemautils.schemas.ddmlcontrolplane",
+  "fields": [
+    {
+      "name": "request_time",
+      "type": [
+        "null",
+        "string"
+      ],
+      "logicalType": "timestamp-millis",
+      "default": null
+    },
+    {
+      "name": "request_duration_ms",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "response",
+      "type": [
+        "null",
+        {
+          "name": "response",
+          "type": "record",
+          "namespace": ".response",
+          "fields": [
+            {
+              "name": "flow_name",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "matching_strategy",
+              "type": [
+                "null",
+                {
+                  "name": "matching_strategy",
+                  "type": "record",
+                  "namespace": ".response.matching_strategy",
+                  "fields": [
+                    {
+                      "name": "markets",
+                      "type": [
+                        "null",
+                        {
+                          "type": "array",
+                          "items": [
+                            "null",
+                            "string"
+                          ]
+                        }
+                      ],
+                      "default": null
+                    },
+                    {
+                      "name": "match",
+                      "type": [
+                        "null",
+                        {
+                          "name": "match",
+                          "type": "record",
+                          "namespace": ".response.matching_strategy.match",
+                          "fields": [
+                            {
+                              "name": "market_id",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "geohash",
+                              "type": [
+                                "null",
+                                "string"
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "query_tokens",
+                              "type": [
+                                "null",
+                                {
+                                  "type": "array",
+                                  "items": [
+                                    "null",
+                                    "string"
+                                  ]
+                                }
+                              ],
+                              "default": null
+                            },
+                            {
+                              "name": "duplicate_field",
+                              "type": [
+                                "null",
+                                "string"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "default": null
+                    }
+                  ]
+                }
+              ],
+              "default": null
+            },
+            {
+              "name": "features",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": [
+                    "null",
+                    {
+                      "name": "features",
+                      "type": "record",
+                      "namespace": ".response.features",
+                      "fields": [
+                        {
+                          "name": "status",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "feature_store_fields",
+                          "type": [
+                            "null",
+                            {
+                              "type": "array",
+                              "items": [
+                                "null",
+                                "string"
+                              ]
+                            }
+                          ],
+                          "default": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    }
+  ]
+}
