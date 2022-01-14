@@ -1,0 +1,24 @@
+{
+  "values": [
+    "null",
+    {
+      "type": "record",
+      "name": "metric_map",
+      "namespace": ".metric_map",
+      "doc": "The actual, target, and expected data for a metric",
+      "fields": [
+        {
+          "name": "actual",
+          "doc": "The actual or real current value for this metric (set for most metrics)",
+          "type": [
+            "null",
+            {
+              "type": "double",
+              "java-class": "java.lang.Double"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

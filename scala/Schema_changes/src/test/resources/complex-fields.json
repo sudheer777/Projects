@@ -1,0 +1,40 @@
+{
+  "fields": [
+    {
+      "name": "carts",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": [
+            "null",
+            {
+              "type": "record",
+              "name": "carts",
+              "namespace": ".carts",
+              "fields": [
+                {
+                  "name": "cart_id",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "cart_diner_id",
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "default": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "default": null
+    }
+  ]
+}
