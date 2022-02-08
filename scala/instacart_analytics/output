@@ -1,0 +1,133 @@
+[info] welcome to sbt 1.5.5 (AdoptOpenJDK Java 1.8.0_292)
+[info] loading global plugins from /Users/sudheerpendyala/.sbt/1.0/plugins
+[info] loading settings for project instacart_analytics-build from plugins.sbt ...
+[info] loading project definition from /Users/sudheerpendyala/projects/Projects/scala/instacart_analytics/project
+[info] loading settings for project instacart_analytics from build.sbt ...
+[info] set current project to InstacartAnalytics (in build file:/Users/sudheerpendyala/projects/Projects/scala/instacart_analytics/)
+[info] running Instacart 
+Missing records for department or aisle: 77396
++----------------------+------+
+|product_name          |cnt   |
++----------------------+------+
+|Banana                |491291|
+|Bag of Organic Bananas|394930|
+|Organic Strawberries  |275577|
+|Organic Baby Spinach  |251705|
+|Organic Hass Avocado  |220877|
+|Organic Avocado       |184224|
+|Large Lemon           |160792|
+|Strawberries          |149445|
+|Limes                 |146660|
+|Organic Whole Milk    |142813|
++----------------------+------+
+
+Top 10 ordered products are: 
+1. Banana
+2. Bag of Organic Bananas
+3. Organic Strawberries
+4. Organic Baby Spinach
+5. Organic Hass Avocado
+6. Organic Avocado
+7. Large Lemon
+8. Strawberries
+9. Limes
+10. Organic Whole Milk
+[warn] In the last 10 seconds, 5.013 (51.5%) were spent in GC. [Heap: 0.37GB free of 0.89GB, max 0.89GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
+[warn] In the last 10 seconds, 5.32 (54.2%) were spent in GC. [Heap: 0.49GB free of 0.89GB, max 0.89GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
+[warn] In the last 10 seconds, 5.165 (51.9%) were spent in GC. [Heap: 0.27GB free of 0.89GB, max 0.89GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
++-----------------------+
+|count(DISTINCT user_id)|
++-----------------------+
+|204309                 |
++-----------------------+
+
+Number of people reorder the same previous ordered products: 204309 out of total users: 206209
+[warn] In the last 10 seconds, 5.1 (51.3%) were spent in GC. [Heap: 0.24GB free of 0.89GB, max 0.89GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
++----------------------+
+|product_name          |
++----------------------+
+|Banana                |
+|Bag of Organic Bananas|
+|Organic Strawberries  |
+|Organic Baby Spinach  |
+|Organic Hass Avocado  |
+|Organic Avocado       |
+|Organic Whole Milk    |
+|Large Lemon           |
+|Organic Raspberries   |
+|Strawberries          |
++----------------------+
+
+Top 10 List most reordered products are: 
+1. Banana
+2. Bag of Organic Bananas
+3. Organic Strawberries
+4. Organic Baby Spinach
+5. Organic Hass Avocado
+6. Organic Avocado
+7. Organic Whole Milk
+8. Large Lemon
+9. Organic Raspberries
+10. Strawberries
++----------+---------------+
+|department|          aisle|
++----------+---------------+
+|    snacks|candy chocolate|
++----------+---------------+
+
+Most important department and aisle (by number of products): department: snacks, aisle: candy chocolate
++---------------+-------+
+|department     |cnt    |
++---------------+-------+
+|produce        |9888378|
+|dairy eggs     |5631067|
+|snacks         |3006412|
+|beverages      |2804175|
+|frozen         |2336858|
+|pantry         |1956819|
+|bakery         |1225181|
+|canned goods   |1114857|
+|deli           |1095540|
+|dry goods pasta|905340 |
++---------------+-------+
+
+Top 10 departments are(by number of orders): 
+1. produce
+2. dairy eggs
+3. snacks
+4. beverages
+5. frozen
+6. pantry
+7. bakery
+8. canned goods
+9. deli
+10. dry goods pasta
+[warn] In the last 10 seconds, 5.01 (51.0%) were spent in GC. [Heap: 0.32GB free of 0.89GB, max 0.89GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
+[warn] In the last 10 seconds, 5.323 (54.1%) were spent in GC. [Heap: 0.36GB free of 0.91GB, max 0.91GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
++----------------------+------+
+|product_name          |cnt   |
++----------------------+------+
+|Banana                |169965|
+|Bag of Organic Bananas|135417|
+|Organic Strawberries  |92499 |
+|Organic Baby Spinach  |82578 |
+|Organic Hass Avocado  |72545 |
+|Organic Avocado       |59603 |
+|Large Lemon           |53479 |
+|Strawberries          |52155 |
+|Organic Raspberries   |49751 |
+|Organic Whole Milk    |49747 |
++----------------------+------+
+
+Top 10 ordered products in the morning (6 AM to 11 AM) are: 
+1. Banana
+2. Bag of Organic Bananas
+3. Organic Strawberries
+4. Organic Baby Spinach
+5. Organic Hass Avocado
+6. Organic Avocado
+7. Large Lemon
+8. Strawberries
+9. Organic Raspberries
+10. Organic Whole Milk
+[success] Total time: 252 s (04:12), completed 26 Jan, 2022 8:33:11 PM
