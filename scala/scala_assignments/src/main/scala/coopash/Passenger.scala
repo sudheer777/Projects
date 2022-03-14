@@ -1,3 +1,5 @@
+package coopash
+
 import org.apache.spark.sql.functions.udf
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{DataFrame, SQLContext}
