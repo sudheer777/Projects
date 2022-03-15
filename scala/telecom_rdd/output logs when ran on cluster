@@ -1,0 +1,1105 @@
+spark-submit --class "MobileAppStoreAnalysis" --master yarn  target/scala-2.11/appleappstoreanalysis_2.11-0.1.0.jar
+22/02/18 02:55:25 INFO spark.SparkContext: Running Spark version 2.4.0-cdh6.2.1
+22/02/18 02:55:25 INFO logging.DriverLogger: Added a local log appender at: /tmp/spark-a5ec23bd-cd08-4ed6-8eaa-ac7068c5775b/__driver_logs__/driver.log
+22/02/18 02:55:25 INFO spark.SparkContext: Submitted application: Apple Store Spark RDD
+22/02/18 02:55:26 INFO spark.SecurityManager: Changing view acls to: educlbdhid0018
+22/02/18 02:55:26 INFO spark.SecurityManager: Changing modify acls to: educlbdhid0018
+22/02/18 02:55:26 INFO spark.SecurityManager: Changing view acls groups to:
+22/02/18 02:55:26 INFO spark.SecurityManager: Changing modify acls groups to:
+22/02/18 02:55:26 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(educlbdhid0018); groups with view permi
+ssions: Set(); users  with modify permissions: Set(educlbdhid0018); groups with modify permissions: Set()
+22/02/18 02:55:26 INFO util.Utils: Successfully started service 'sparkDriver' on port 45192.
+22/02/18 02:55:26 INFO spark.SparkEnv: Registering MapOutputTracker
+22/02/18 02:55:26 INFO spark.SparkEnv: Registering BlockManagerMaster
+22/02/18 02:55:26 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/02/18 02:55:26 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/02/18 02:55:26 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-954f0938-fd72-4df1-98e6-e00677f15d61
+22/02/18 02:55:26 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+22/02/18 02:55:26 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+22/02/18 02:55:26 INFO spark.SparkContext: Added JAR file:/home/educlbdhid0018/mobile_app_store/target/scala-2.11/appleappstoreanalysis_2.11-0.1.0.jar at spark://ip-10-1-1-204.ap-
+south-1.compute.internal:45192/jars/appleappstoreanalysis_2.11-0.1.0.jar with timestamp 1645152926479
+22/02/18 02:55:26 INFO util.Utils: Using initial executors = 0, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+22/02/18 02:55:27 INFO client.RMProxy: Connecting to ResourceManager at ip-10-1-1-204.ap-south-1.compute.internal/10.1.1.204:8032
+22/02/18 02:55:27 INFO yarn.Client: Requesting a new application from cluster with 5 NodeManagers
+22/02/18 02:55:27 INFO conf.Configuration: resource-types.xml not found
+22/02/18 02:55:27 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+22/02/18 02:55:27 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (6144 MB per container)
+22/02/18 02:55:27 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+22/02/18 02:55:27 INFO yarn.Client: Setting up container launch context for our AM
+22/02/18 02:55:27 INFO yarn.Client: Setting up the launch environment for our AM container
+22/02/18 02:55:28 INFO yarn.Client: Preparing resources for our AM container
+22/02/18 02:55:28 INFO yarn.Client: Uploading resource file:/tmp/spark-a5ec23bd-cd08-4ed6-8eaa-ac7068c5775b/__spark_conf__9000026053895011846.zip -> hdfs://nameservice1/user/educl
+bdhid0018/.sparkStaging/application_1644201200461_2233/__spark_conf__.zip
+22/02/18 02:55:28 INFO spark.SecurityManager: Changing view acls to: educlbdhid0018
+22/02/18 02:55:28 INFO spark.SecurityManager: Changing modify acls to: educlbdhid0018
+22/02/18 02:55:28 INFO spark.SecurityManager: Changing view acls groups to:
+22/02/18 02:55:28 INFO spark.SecurityManager: Changing modify acls groups to:
+22/02/18 02:55:28 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(educlbdhid0018); groups with view permi
+ssions: Set(); users  with modify permissions: Set(educlbdhid0018); groups with modify permissions: Set()
+22/02/18 02:55:28 INFO yarn.Client: Submitting application application_1644201200461_2233 to ResourceManager
+22/02/18 02:55:28 INFO impl.YarnClientImpl: Submitted application application_1644201200461_2233
+22/02/18 02:55:29 INFO yarn.Client: Application report for application_1644201200461_2233 (state: ACCEPTED)
+22/02/18 02:55:29 INFO yarn.Client:
+         client token: N/A
+         diagnostics: AM container is launched, waiting for AM container to Register with RM
+         ApplicationMaster host: N/A
+         ApplicationMaster RPC port: -1
+         queue: root.default
+         start time: 1645152928532
+         final status: UNDEFINED
+         tracking URL: http://ip-10-1-1-204.ap-south-1.compute.internal:6066/proxy/application_1644201200461_2233/
+         user: educlbdhid0018
+22/02/18 02:55:30 INFO yarn.Client: Application report for application_1644201200461_2233 (state: ACCEPTED)
+22/02/18 02:55:31 INFO yarn.Client: Application report for application_1644201200461_2233 (state: ACCEPTED)
+22/02/18 02:55:32 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> ip-10-1-1-204.ap-south-
+1.compute.internal, PROXY_URI_BASES -> http://ip-10-1-1-204.ap-south-1.compute.internal:6066/proxy/application_1644201200461_2233), /proxy/application_1644201200461_2233
+22/02/18 02:55:32 INFO yarn.Client: Application report for application_1644201200461_2233 (state: RUNNING)
+22/02/18 02:55:32 INFO yarn.Client:
+         client token: N/A
+         diagnostics: N/A
+         ApplicationMaster host: 10.1.2.209
+         ApplicationMaster RPC port: -1
+         queue: root.default
+         start time: 1645152928532
+         final status: UNDEFINED
+         tracking URL: http://ip-10-1-1-204.ap-south-1.compute.internal:6066/proxy/application_1644201200461_2233/
+         user: educlbdhid0018
+22/02/18 02:55:32 INFO cluster.YarnClientSchedulerBackend: Application application_1644201200461_2233 has started running.
+22/02/18 02:55:32 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1644201200461_2233 and attemptId None
+22/02/18 02:55:32 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44889.
+22/02/18 02:55:32 INFO netty.NettyBlockTransferService: Server created on ip-10-1-1-204.ap-south-1.compute.internal:44889
+22/02/18 02:55:32 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/02/18 02:55:32 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ip-10-1-1-204.ap-south-1.compute.internal, 44889, None)
+22/02/18 02:55:32 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-10-1-1-204.ap-south-1.compute.internal:44889 with 366.3 MB RAM, BlockManagerId(driver, ip-1
+0-1-1-204.ap-south-1.compute.internal, 44889, None)
+22/02/18 02:55:32 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ip-10-1-1-204.ap-south-1.compute.internal, 44889, None)
+22/02/18 02:55:32 INFO storage.BlockManager: external shuffle service port = 7337
+22/02/18 02:55:32 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, ip-10-1-1-204.ap-south-1.compute.internal, 44889, None)
+22/02/18 02:55:32 INFO util.log: Logging initialized @8243ms
+22/02/18 02:55:33 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+22/02/18 02:55:33 INFO scheduler.EventLoggingListener: Logging events to hdfs://nameservice1/user/spark/applicationHistory/application_1644201200461_2233
+22/02/18 02:55:33 INFO util.Utils: Using initial executors = 0, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instances
+22/02/18 02:55:33 INFO spark.SparkContext: Registered listener com.cloudera.spark.lineage.NavigatorAppListener
+22/02/18 02:55:33 INFO logging.DriverLogger$DfsAsyncWriter: Started driver log file sync to: /user/spark/driverLogs/application_1644201200461_2233_driver.log
+22/02/18 02:55:33 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+22/02/18 02:55:33 INFO internal.SharedState: loading hive config file: file:/etc/hive/conf.cloudera.hive/hive-site.xml
+22/02/18 02:55:33 INFO internal.SharedState: spark.sql.warehouse.dir is not set, but hive.metastore.warehouse.dir is set. Setting spark.sql.warehouse.dir to the value of hive.meta
+store.warehouse.dir ('/user/hive/warehouse').
+22/02/18 02:55:33 INFO internal.SharedState: Warehouse path is '/user/hive/warehouse'.
+22/02/18 02:55:34 INFO state.StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+22/02/18 02:55:36 INFO datasources.FileSourceStrategy: Pruning directories with:
+22/02/18 02:55:36 INFO datasources.FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+22/02/18 02:55:36 INFO datasources.FileSourceStrategy: Output Data Schema: struct<value: string>
+22/02/18 02:55:36 INFO execution.FileSourceScanExec: Pushed Filters:
+22/02/18 02:55:36 INFO codegen.CodeGenerator: Code generated in 201.022638 ms
+22/02/18 02:55:37 INFO codegen.CodeGenerator: Code generated in 21.878044 ms
+22/02/18 02:55:37 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 336.8 KB, free 366.0 MB)
+22/02/18 02:55:37 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.3 KB, free 365.9 MB)
+22/02/18 02:55:37 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 32.3 KB, free: 366.3 MB)
+22/02/18 02:55:37 INFO spark.SparkContext: Created broadcast 0 from csv at MobileAppStoreAnalysis.scala:19
+22/02/18 02:55:37 INFO execution.FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+22/02/18 02:55:37 INFO spark.SparkContext: Starting job: csv at MobileAppStoreAnalysis.scala:19
+22/02/18 02:55:37 INFO scheduler.DAGScheduler: Got job 0 (csv at MobileAppStoreAnalysis.scala:19) with 1 output partitions
+22/02/18 02:55:37 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (csv at MobileAppStoreAnalysis.scala:19)
+22/02/18 02:55:37 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:37 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:37 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at MobileAppStoreAnalysis.scala:19), which has no missing parents
+22/02/18 02:55:37 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 8.8 KB, free 365.9 MB)
+22/02/18 02:55:37 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.5 KB, free 365.9 MB)
+22/02/18 02:55:37 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 4.5 KB, free: 366.3 MB)
+22/02/18 02:55:37 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:37 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at MobileAppStoreAnalysis.scala:19) (first 15 tasks are fo
+r partitions Vector(0))
+22/02/18 02:55:37 INFO cluster.YarnScheduler: Adding task set 0.0 with 1 tasks
+22/02/18 02:55:38 INFO spark.ExecutorAllocationManager: Requesting 1 new executor because tasks are backlogged (new desired total will be 1)
+22/02/18 02:55:43 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.1.2.103:60734) with ID 1
+22/02/18 02:55:43 INFO spark.ExecutorAllocationManager: New executor 1 has registered (new total is 1)
+22/02/18 02:55:43 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, RACK_LOCAL, 8367 bytes)
+22/02/18 02:55:43 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-10-1-2-103.ap-south-1.compute.internal:45388 with 366.3 MB RAM, BlockManagerId(1, ip-10-1-2
+-103.ap-south-1.compute.internal, 45388, None)
+22/02/18 02:55:44 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 4.5 KB, free: 366.3 MB)
+22/02/18 02:55:45 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 32.3 KB, free: 366.3 MB)
+22/02/18 02:55:46 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 3509 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:46 INFO cluster.YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool
+22/02/18 02:55:46 INFO scheduler.DAGScheduler: ResultStage 0 (csv at MobileAppStoreAnalysis.scala:19) finished in 9.257 s
+22/02/18 02:55:46 INFO scheduler.DAGScheduler: Job 0 finished: csv at MobileAppStoreAnalysis.scala:19, took 9.321779 s
+22/02/18 02:55:46 INFO conf.HiveConf: Found configuration file file:/etc/hive/conf.cloudera.hive/hive-site.xml
+22/02/18 02:55:46 INFO hive.HiveUtils: Initializing HiveMetastoreConnection version 2.1 using Spark classes.
+22/02/18 02:55:47 INFO conf.HiveConf: Found configuration file file:/etc/hive/conf.cloudera.hive/hive-site.xml
+22/02/18 02:55:47 INFO session.SessionState: Created local directory: /tmp/educlbdhid0018
+22/02/18 02:55:47 INFO session.SessionState: Created HDFS directory: /tmp/hive/educlbdhid0018/df81c024-88fe-4522-9119-3b21efba771b
+22/02/18 02:55:47 INFO session.SessionState: Created local directory: /tmp/educlbdhid0018/df81c024-88fe-4522-9119-3b21efba771b
+22/02/18 02:55:47 INFO session.SessionState: Created HDFS directory: /tmp/hive/educlbdhid0018/df81c024-88fe-4522-9119-3b21efba771b/_tmp_space.db
+22/02/18 02:55:47 INFO client.HiveClientImpl: Warehouse location for Hive client (version 2.1.1) is /user/hive/warehouse
+22/02/18 02:55:48 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 4.5 KB, free: 366.3 MB)
+22/02/18 02:55:48 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 4.5 KB, free: 366.3 MB)
+22/02/18 02:55:48 INFO hive.metastore: HMS client filtering is enabled.
+22/02/18 02:55:48 INFO hive.metastore: Trying to connect to metastore with URI thrift://ip-10-1-2-24.ap-south-1.compute.internal:9083
+22/02/18 02:55:48 INFO hive.metastore: Opened a connection to metastore, current connections: 1
+22/02/18 02:55:48 INFO hive.metastore: Connected to metastore.
+22/02/18 02:55:48 INFO datasources.FileSourceStrategy: Pruning directories with:
+22/02/18 02:55:48 INFO datasources.FileSourceStrategy: Post-Scan Filters:
+22/02/18 02:55:48 INFO datasources.FileSourceStrategy: Output Data Schema: struct<value: string>
+22/02/18 02:55:48 INFO execution.FileSourceScanExec: Pushed Filters:
+22/02/18 02:55:48 INFO codegen.CodeGenerator: Code generated in 9.083056 ms
+22/02/18 02:55:48 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 336.8 KB, free 365.6 MB)
+22/02/18 02:55:48 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 32.3 KB, free 365.6 MB)
+22/02/18 02:55:48 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 32.3 KB, free: 366.2 MB)
+22/02/18 02:55:48 INFO spark.SparkContext: Created broadcast 2 from csv at MobileAppStoreAnalysis.scala:19
+22/02/18 02:55:48 INFO execution.FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 9
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 27
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 12
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 20
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 8
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 2
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 13
+22/02/18 02:55:49 INFO storage.BlockManagerInfo: Removed broadcast_0_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 32.3 KB, free: 366.3 MB)
+22/02/18 02:55:49 INFO storage.BlockManagerInfo: Removed broadcast_0_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 32.3 KB, free: 366.3 MB)
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 3
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 30
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 14
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 15
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 25
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 26
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 18
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 28
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 19
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 31
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 23
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 1
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 22
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 0
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 7
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 24
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 16
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 6
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 10
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 4
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 11
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 17
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 29
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 21
+22/02/18 02:55:49 INFO spark.ContextCleaner: Cleaned accumulator 5
+22/02/18 02:55:49 INFO datasources.FileSourceStrategy: Pruning directories with:
+22/02/18 02:55:49 INFO datasources.FileSourceStrategy: Post-Scan Filters:
+22/02/18 02:55:49 INFO datasources.FileSourceStrategy: Output Data Schema: struct<_c0: string, id: string, track_name: string, size_bytes: string, currency: string ... 15 more fie
+lds>
+22/02/18 02:55:49 INFO execution.FileSourceScanExec: Pushed Filters:
+22/02/18 02:55:49 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 336.8 KB, free 365.6 MB)
+22/02/18 02:55:49 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 32.3 KB, free 365.6 MB)
+22/02/18 02:55:49 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 32.3 KB, free: 366.2 MB)
+22/02/18 02:55:49 INFO spark.SparkContext: Created broadcast 3 from rdd at MobileAppStoreAnalysis.scala:21
+22/02/18 02:55:49 INFO execution.FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+22/02/18 02:55:49 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 342.2 KB, free 365.2 MB)
+22/02/18 02:55:49 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 32.4 KB, free 365.2 MB)
+22/02/18 02:55:49 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 32.4 KB, free: 366.2 MB)
+22/02/18 02:55:49 INFO spark.SparkContext: Created broadcast 4 from csv at MobileAppStoreAnalysis.scala:29
+22/02/18 02:55:49 INFO input.FileInputFormat: Total input files to process : 1
+22/02/18 02:55:49 INFO input.FileInputFormat: Total input files to process : 1
+22/02/18 02:55:49 INFO input.CombineFileInputFormat: DEBUG: Terminated node allocation with : CompletedNodes: 3, size left: 0
+22/02/18 02:55:49 INFO spark.SparkContext: Starting job: csv at MobileAppStoreAnalysis.scala:29
+22/02/18 02:55:49 INFO scheduler.DAGScheduler: Got job 1 (csv at MobileAppStoreAnalysis.scala:29) with 1 output partitions
+22/02/18 02:55:49 INFO scheduler.DAGScheduler: Final stage: ResultStage 1 (csv at MobileAppStoreAnalysis.scala:29)
+22/02/18 02:55:49 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:49 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:49 INFO scheduler.DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[19] at csv at MobileAppStoreAnalysis.scala:29), which has no missing parents
+22/02/18 02:55:49 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 5.6 KB, free 365.2 MB)
+22/02/18 02:55:49 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 3.4 KB, free 365.2 MB)
+22/02/18 02:55:49 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 3.4 KB, free: 366.2 MB)
+22/02/18 02:55:49 INFO spark.SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:49 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[19] at csv at MobileAppStoreAnalysis.scala:29) (first 15 tasks are f
+or partitions Vector(0))
+22/02/18 02:55:49 INFO cluster.YarnScheduler: Adding task set 1.0 with 1 tasks
+22/02/18 02:55:49 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, RACK_LOCAL, 8037 bytes)
+22/02/18 02:55:49 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 3.4 KB, free: 366.3 MB)
+22/02/18 02:55:49 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 32.4 KB, free: 366.3 MB)
+22/02/18 02:55:50 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 419 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:50 INFO cluster.YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool
+22/02/18 02:55:50 INFO scheduler.DAGScheduler: ResultStage 1 (csv at MobileAppStoreAnalysis.scala:29) finished in 0.433 s
+22/02/18 02:55:50 INFO scheduler.DAGScheduler: Job 1 finished: csv at MobileAppStoreAnalysis.scala:29, took 0.438795 s
+22/02/18 02:55:50 INFO datasources.FileSourceStrategy: Pruning directories with:
+22/02/18 02:55:50 INFO datasources.FileSourceStrategy: Post-Scan Filters:
+22/02/18 02:55:50 INFO datasources.FileSourceStrategy: Output Data Schema: struct<id: string, track_name: string, size_bytes: string, app_desc: string ... 2 more fields>
+22/02/18 02:55:50 INFO execution.FileSourceScanExec: Pushed Filters:
+22/02/18 02:55:50 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 336.9 KB, free 364.9 MB)
+22/02/18 02:55:50 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 32.3 KB, free 364.8 MB)
+22/02/18 02:55:50 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 32.3 KB, free: 366.2 MB)
+22/02/18 02:55:50 INFO spark.SparkContext: Created broadcast 6 from rdd at MobileAppStoreAnalysis.scala:31
+22/02/18 02:55:50 INFO execution.FileSourceScanExec: Planning scan with bin packing, max size: 8580110 bytes, open cost is considered as scanning 4194304 bytes.
+Top 10 rows:
+22/02/18 02:55:50 INFO spark.SparkContext: Starting job: take at MobileAppStoreAnalysis.scala:51
+22/02/18 02:55:50 INFO scheduler.DAGScheduler: Got job 2 (take at MobileAppStoreAnalysis.scala:51) with 1 output partitions
+22/02/18 02:55:50 INFO scheduler.DAGScheduler: Final stage: ResultStage 2 (take at MobileAppStoreAnalysis.scala:51)
+22/02/18 02:55:50 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:50 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:50 INFO scheduler.DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[29] at map at MobileAppStoreAnalysis.scala:44), which has no missing parents
+22/02/18 02:55:50 INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 27.3 KB, free 364.8 MB)
+22/02/18 02:55:50 INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 11.7 KB, free 364.8 MB)
+22/02/18 02:55:50 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 11.7 KB, free: 366.2 MB)
+22/02/18 02:55:50 INFO spark.SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:50 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[29] at map at MobileAppStoreAnalysis.scala:44) (first 15 tasks are f
+or partitions Vector(0))
+22/02/18 02:55:50 INFO cluster.YarnScheduler: Adding task set 2.0 with 1 tasks
+22/02/18 02:55:50 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, RACK_LOCAL, 8367 bytes)
+22/02/18 02:55:50 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 11.7 KB, free: 366.3 MB)
+22/02/18 02:55:50 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 32.3 KB, free: 366.2 MB)
+22/02/18 02:55:51 INFO storage.BlockManagerInfo: Added rdd_11_0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 694.8 KB, free: 365.5 MB)
+22/02/18 02:55:53 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 3506 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:53 INFO cluster.YarnScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool
+22/02/18 02:55:53 INFO scheduler.DAGScheduler: ResultStage 2 (take at MobileAppStoreAnalysis.scala:51) finished in 3.529 s
+22/02/18 02:55:53 INFO scheduler.DAGScheduler: Job 2 finished: take at MobileAppStoreAnalysis.scala:51, took 3.537695 s
+[1,281656475,PAC-MAN Premium,100788224,USD,3.99,21292,26,4,4.5,6.3.5,4+,Games,38,5,10,1,96.119140625,0.09386634826660156]
+[2,281796108,Evernote - stay organized,158578688,USD,0,161065,26,4,3.5,8.2.2,4+,Productivity,37,5,23,1,151.232421875,0.1476879119873047]
+[3,281940292,WeatherBug - Local Weather, Radar, Maps, Alerts,100524032,USD,0,188583,2822,3.5,4.5,5.0.0,4+,Weather,37,5,3,1,95.8671875,0.09362030029296875]
+[4,282614216,eBay: Best App to Buy, Sell, Save! Online Shopping,128512000,USD,0,262241,649,4,4.5,5.10.0,12+,Shopping,37,5,9,1,122.55859375,0.11968612670898438]
+[5,282935706,Bible,92774400,USD,0,985920,5320,4.5,5,7.5.1,4+,Reference,37,5,45,1,88.4765625,0.08640289306640625]
+[6,283619399,Shanghai Mahjong,10485713,USD,0.99,8253,5516,4,4,1.8,4+,Games,47,5,1,1,9.999955177307129,0.009765581227838993]
+[7,283646709,PayPal - Send and request money safely,227795968,USD,0,119487,879,4,4.5,6.12.0,4+,Finance,37,0,19,1,217.2431640625,0.21215152740478516]
+[8,284035177,Pandora - Music & Radio,130242560,USD,0,1126879,3594,4,4.5,8.4.1,12+,Music,37,4,1,1,124.208984375,0.12129783630371094]
+[9,284666222,PCalc - The Best Calculator,49250304,USD,9.99,1117,4,4.5,5,3.6.6,4+,Utilities,37,5,1,1,46.96875,0.045867919921875]
+[10,284736660,Ms. PAC-MAN,70023168,USD,3.99,7885,40,4,4,4.0.4,4+,Games,38,0,10,1,66.779296875,0.06521415710449219]
+22/02/18 02:55:53 INFO spark.SparkContext: Starting job: take at MobileAppStoreAnalysis.scala:64
+22/02/18 02:55:53 INFO scheduler.DAGScheduler: Registering RDD 31 (sortBy at MobileAppStoreAnalysis.scala:63)
+22/02/18 02:55:53 INFO scheduler.DAGScheduler: Got job 3 (take at MobileAppStoreAnalysis.scala:64) with 1 output partitions
+22/02/18 02:55:53 INFO scheduler.DAGScheduler: Final stage: ResultStage 4 (take at MobileAppStoreAnalysis.scala:64)
+22/02/18 02:55:53 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+22/02/18 02:55:53 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 3)
+22/02/18 02:55:53 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[31] at sortBy at MobileAppStoreAnalysis.scala:63), which has no missing parents
+22/02/18 02:55:53 INFO memory.MemoryStore: Block broadcast_8 stored as values in memory (estimated size 29.1 KB, free 364.8 MB)
+22/02/18 02:55:53 INFO memory.MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 12.8 KB, free 364.8 MB)
+22/02/18 02:55:53 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 12.8 KB, free: 366.1 MB)
+22/02/18 02:55:53 INFO spark.SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:53 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[31] at sortBy at MobileAppStoreAnalysis.scala:63) (first 15 task
+s are for partitions Vector(0))
+22/02/18 02:55:53 INFO cluster.YarnScheduler: Adding task set 3.0 with 1 tasks
+22/02/18 02:55:53 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8356 byt
+es)
+22/02/18 02:55:53 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 12.8 KB, free: 365.5 MB)
+22/02/18 02:55:54 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 382 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:54 INFO cluster.YarnScheduler: Removed TaskSet 3.0, whose tasks have all completed, from pool
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: ShuffleMapStage 3 (sortBy at MobileAppStoreAnalysis.scala:63) finished in 0.405 s
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: running: Set()
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 4)
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: failed: Set()
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[33] at sortBy at MobileAppStoreAnalysis.scala:63), which has no missing parents
+22/02/18 02:55:54 INFO memory.MemoryStore: Block broadcast_9 stored as values in memory (estimated size 4.1 KB, free 364.8 MB)
+22/02/18 02:55:54 INFO memory.MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 2.4 KB, free 364.8 MB)
+22/02/18 02:55:54 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 2.4 KB, free: 366.1 MB)
+22/02/18 02:55:54 INFO spark.SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[33] at sortBy at MobileAppStoreAnalysis.scala:63) (first 15 tasks ar
+e for partitions Vector(0))
+22/02/18 02:55:54 INFO cluster.YarnScheduler: Adding task set 4.0 with 1 tasks
+22/02/18 02:55:54 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, NODE_LOCAL, 7673 bytes)
+22/02/18 02:55:54 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 2.4 KB, free: 365.5 MB)
+22/02/18 02:55:54 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.1.2.103:60734
+22/02/18 02:55:54 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 483 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:54 INFO cluster.YarnScheduler: Removed TaskSet 4.0, whose tasks have all completed, from pool
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: ResultStage 4 (take at MobileAppStoreAnalysis.scala:64) finished in 0.494 s
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Job 3 finished: take at MobileAppStoreAnalysis.scala:64, took 0.919829 s
+List top 10 trending apps:
+id: 387428400, track_name: Infinity Blade, rating for latest version: 5.0, number of users rated for latest version: 177050
+id: 392988420, track_name: Zappos: shop shoes & clothes, fast free shipping, rating for latest version: 5.0, number of users rated for latest version: 39452
+id: 383298204, track_name: shopkick - Shopping Rewards & Discounts, rating for latest version: 5.0, number of users rated for latest version: 29363
+id: 979401801, track_name: Browser and File Manager for Documents, rating for latest version: 5.0, number of users rated for latest version: 27213
+id: 918054748, track_name: The Room Three, rating for latest version: 5.0, number of users rated for latest version: 21769
+id: 1141762073, track_name: Tricky Test 2™: Genius Brain?, rating for latest version: 5.0, number of users rated for latest version: 19952
+id: 366247306, track_name: ▻Sudoku, rating for latest version: 5.0, number of users rated for latest version: 17119
+id: 927006017, track_name: AdVenture Capitalist, rating for latest version: 5.0, number of users rated for latest version: 11269
+id: 981633844, track_name: Block Craft 3D: Building Simulator Game For Free, rating for latest version: 5.0, number of users rated for latest version: 11001
+id: 930574573, track_name: Sniper 3D Assassin: Shoot to Kill Gun Game, rating for latest version: 5.0, number of users rated for latest version: 10332
+22/02/18 02:55:54 INFO spark.SparkContext: Starting job: max at MobileAppStoreAnalysis.scala:77
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Got job 4 (max at MobileAppStoreAnalysis.scala:77) with 1 output partitions
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Final stage: ResultStage 5 (max at MobileAppStoreAnalysis.scala:77)
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[34] at map at MobileAppStoreAnalysis.scala:76), which has no missing parents
+22/02/18 02:55:54 INFO memory.MemoryStore: Block broadcast_10 stored as values in memory (estimated size 27.6 KB, free 364.7 MB)
+22/02/18 02:55:54 INFO memory.MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 11.9 KB, free 364.7 MB)
+22/02/18 02:55:54 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 11.9 KB, free: 366.1 MB)
+22/02/18 02:55:54 INFO spark.SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[34] at map at MobileAppStoreAnalysis.scala:76) (first 15 tasks are f
+or partitions Vector(0))
+22/02/18 02:55:54 INFO cluster.YarnScheduler: Adding task set 5.0 with 1 tasks
+22/02/18 02:55:54 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8367 byt
+es)
+22/02/18 02:55:54 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 11.9 KB, free: 365.5 MB)
+22/02/18 02:55:54 INFO storage.BlockManagerInfo: Added rdd_34_0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 56.2 KB, free: 365.5 MB)
+22/02/18 02:55:54 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 5.0 (TID 5) in 158 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:54 INFO cluster.YarnScheduler: Removed TaskSet 5.0, whose tasks have all completed, from pool
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: ResultStage 5 (max at MobileAppStoreAnalysis.scala:77) finished in 0.170 s
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Job 4 finished: max at MobileAppStoreAnalysis.scala:77, took 0.175264 s
+22/02/18 02:55:54 INFO spark.SparkContext: Starting job: min at MobileAppStoreAnalysis.scala:78
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Got job 5 (min at MobileAppStoreAnalysis.scala:78) with 1 output partitions
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Final stage: ResultStage 6 (min at MobileAppStoreAnalysis.scala:78)
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[34] at map at MobileAppStoreAnalysis.scala:76), which has no missing parents
+22/02/18 02:55:54 INFO memory.MemoryStore: Block broadcast_11 stored as values in memory (estimated size 27.6 KB, free 364.7 MB)
+22/02/18 02:55:54 INFO memory.MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 11.9 KB, free 364.7 MB)
+22/02/18 02:55:54 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 11.9 KB, free: 366.1 MB)
+22/02/18 02:55:54 INFO spark.SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:54 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[34] at map at MobileAppStoreAnalysis.scala:76) (first 15 tasks are f
+or partitions Vector(0))
+22/02/18 02:55:54 INFO cluster.YarnScheduler: Adding task set 6.0 with 1 tasks
+22/02/18 02:55:54 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8367 byt
+es)
+22/02/18 02:55:54 INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 11.9 KB, free: 365.5 MB)
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 73 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Removed TaskSet 6.0, whose tasks have all completed, from pool
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: ResultStage 6 (min at MobileAppStoreAnalysis.scala:78) finished in 0.084 s
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Job 5 finished: min at MobileAppStoreAnalysis.scala:78, took 0.088253 s
+22/02/18 02:55:55 INFO spark.SparkContext: Starting job: sum at MobileAppStoreAnalysis.scala:82
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Got job 6 (sum at MobileAppStoreAnalysis.scala:82) with 1 output partitions
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Final stage: ResultStage 7 (sum at MobileAppStoreAnalysis.scala:82)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[37] at numericRDDToDoubleRDDFunctions at MobileAppStoreAnalysis.scala:82), which has no m
+issing parents
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_12 stored as values in memory (estimated size 28.2 KB, free 364.7 MB)
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 12.1 KB, free 364.6 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 12.1 KB, free: 366.1 MB)
+22/02/18 02:55:55 INFO spark.SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[37] at numericRDDToDoubleRDDFunctions at MobileAppStoreAnalysis.scal
+a:82) (first 15 tasks are for partitions Vector(0))
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Adding task set 7.0 with 1 tasks
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 7.0 (TID 7, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8367 byt
+es)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 12.1 KB, free: 365.4 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added rdd_36_0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 3.6 KB, free: 365.4 MB)
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 7.0 (TID 7) in 205 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Removed TaskSet 7.0, whose tasks have all completed, from pool
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: ResultStage 7 (sum at MobileAppStoreAnalysis.scala:82) finished in 0.216 s
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Job 6 finished: sum at MobileAppStoreAnalysis.scala:82, took 0.221367 s
+22/02/18 02:55:55 INFO spark.SparkContext: Starting job: count at MobileAppStoreAnalysis.scala:82
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Got job 7 (count at MobileAppStoreAnalysis.scala:82) with 1 output partitions
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Final stage: ResultStage 8 (count at MobileAppStoreAnalysis.scala:82)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[36] at map at MobileAppStoreAnalysis.scala:81), which has no missing parents
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_13 stored as values in memory (estimated size 27.5 KB, free 364.6 MB)
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 11.9 KB, free 364.6 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 11.9 KB, free: 366.1 MB)
+22/02/18 02:55:55 INFO spark.SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[36] at map at MobileAppStoreAnalysis.scala:81) (first 15 tasks are f
+or partitions Vector(0))
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Adding task set 8.0 with 1 tasks
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 8.0 (TID 8, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8367 byt
+es)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 11.9 KB, free: 365.4 MB)
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 8.0 (TID 8) in 39 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Removed TaskSet 8.0, whose tasks have all completed, from pool
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: ResultStage 8 (count at MobileAppStoreAnalysis.scala:82) finished in 0.050 s
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Job 7 finished: count at MobileAppStoreAnalysis.scala:82, took 0.053989 s
+22/02/18 02:55:55 INFO spark.SparkContext: Starting job: sum at MobileAppStoreAnalysis.scala:87
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Got job 8 (sum at MobileAppStoreAnalysis.scala:87) with 1 output partitions
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Final stage: ResultStage 9 (sum at MobileAppStoreAnalysis.scala:87)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[40] at numericRDDToDoubleRDDFunctions at MobileAppStoreAnalysis.scala:87), which has no m
+issing parents
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_14 stored as values in memory (estimated size 28.2 KB, free 364.6 MB)
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 12.1 KB, free 364.6 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 12.1 KB, free: 366.1 MB)
+22/02/18 02:55:55 INFO spark.SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[40] at numericRDDToDoubleRDDFunctions at MobileAppStoreAnalysis.scal
+a:87) (first 15 tasks are for partitions Vector(0))
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Adding task set 9.0 with 1 tasks
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 9.0 (TID 9, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8367 byt
+es)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 12.1 KB, free: 365.4 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added rdd_39_0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 1984.0 B, free: 365.4 MB)
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 9.0 (TID 9) in 122 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Removed TaskSet 9.0, whose tasks have all completed, from pool
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: ResultStage 9 (sum at MobileAppStoreAnalysis.scala:87) finished in 0.134 s
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Job 8 finished: sum at MobileAppStoreAnalysis.scala:87, took 0.137526 s
+22/02/18 02:55:55 INFO spark.SparkContext: Starting job: count at MobileAppStoreAnalysis.scala:87
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Got job 9 (count at MobileAppStoreAnalysis.scala:87) with 1 output partitions
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Final stage: ResultStage 10 (count at MobileAppStoreAnalysis.scala:87)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[39] at map at MobileAppStoreAnalysis.scala:86), which has no missing parents
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_15 stored as values in memory (estimated size 27.5 KB, free 364.5 MB)
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 11.9 KB, free 364.5 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_15_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 11.9 KB, free: 366.1 MB)
+22/02/18 02:55:55 INFO spark.SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[39] at map at MobileAppStoreAnalysis.scala:86) (first 15 tasks are
+for partitions Vector(0))
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Adding task set 10.0 with 1 tasks
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 10.0 (TID 10, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8367 b
+ytes)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_15_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 11.9 KB, free: 365.4 MB)
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 10.0 (TID 10) in 39 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Removed TaskSet 10.0, whose tasks have all completed, from pool
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: ResultStage 10 (count at MobileAppStoreAnalysis.scala:87) finished in 0.049 s
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Job 9 finished: count at MobileAppStoreAnalysis.scala:87, took 0.052519 s
+The difference in the average number of screenshots displayed of highest and lowest rating apps: 1.1310680248890757
+22/02/18 02:55:55 INFO spark.SparkContext: Starting job: count at MobileAppStoreAnalysis.scala:102
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Got job 10 (count at MobileAppStoreAnalysis.scala:102) with 1 output partitions
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Final stage: ResultStage 11 (count at MobileAppStoreAnalysis.scala:102)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[41] at filter at MobileAppStoreAnalysis.scala:100), which has no missing parents
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_16 stored as values in memory (estimated size 27.2 KB, free 364.5 MB)
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 11.7 KB, free 364.5 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_16_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 11.7 KB, free: 366.1 MB)
+22/02/18 02:55:55 INFO spark.SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[41] at filter at MobileAppStoreAnalysis.scala:100) (first 15 tasks
+are for partitions Vector(0))
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Adding task set 11.0 with 1 tasks
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 11.0 (TID 11, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8367 b
+ytes)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_16_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 11.7 KB, free: 365.4 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added rdd_41_0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 402.9 KB, free: 365.0 MB)
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 11.0 (TID 11) in 269 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Removed TaskSet 11.0, whose tasks have all completed, from pool
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: ResultStage 11 (count at MobileAppStoreAnalysis.scala:102) finished in 0.280 s
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Job 10 finished: count at MobileAppStoreAnalysis.scala:102, took 0.283920 s
+22/02/18 02:55:55 INFO spark.SparkContext: Starting job: count at MobileAppStoreAnalysis.scala:105
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Got job 11 (count at MobileAppStoreAnalysis.scala:105) with 1 output partitions
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Final stage: ResultStage 12 (count at MobileAppStoreAnalysis.scala:105)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Missing parents: List()
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[42] at filter at MobileAppStoreAnalysis.scala:104), which has no missing parents
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_17 stored as values in memory (estimated size 27.4 KB, free 364.5 MB)
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 11.9 KB, free 364.4 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_17_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 11.9 KB, free: 366.1 MB)
+22/02/18 02:55:55 INFO spark.SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[42] at filter at MobileAppStoreAnalysis.scala:104) (first 15 tasks
+are for partitions Vector(0))
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Adding task set 12.0 with 1 tasks
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 12.0 (TID 12, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8367 b
+ytes)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_17_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 11.9 KB, free: 365.0 MB)
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 12.0 (TID 12) in 39 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Removed TaskSet 12.0, whose tasks have all completed, from pool
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: ResultStage 12 (count at MobileAppStoreAnalysis.scala:105) finished in 0.050 s
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Job 11 finished: count at MobileAppStoreAnalysis.scala:105, took 0.052611 s
+Percentage of high rated apps support multiple languages: 47.5609756097561%
+Rating with average price, average size in bytes
+22/02/18 02:55:55 INFO spark.SparkContext: Starting job: collect at MobileAppStoreAnalysis.scala:127
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Registering RDD 43 (map at MobileAppStoreAnalysis.scala:122)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Registering RDD 46 (sortBy at MobileAppStoreAnalysis.scala:125)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Got job 12 (collect at MobileAppStoreAnalysis.scala:127) with 1 output partitions
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Final stage: ResultStage 15 (collect at MobileAppStoreAnalysis.scala:127)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 14)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 14)
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 13 (MapPartitionsRDD[43] at map at MobileAppStoreAnalysis.scala:122), which has no missing parents
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_18 stored as values in memory (estimated size 28.4 KB, free 364.4 MB)
+22/02/18 02:55:55 INFO memory.MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 12.4 KB, free 364.4 MB)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_18_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 12.4 KB, free: 366.0 MB)
+22/02/18 02:55:55 INFO spark.SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:55 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 13 (MapPartitionsRDD[43] at map at MobileAppStoreAnalysis.scala:122) (first 15 tasks
+ are for partitions Vector(0))
+22/02/18 02:55:55 INFO cluster.YarnScheduler: Adding task set 13.0 with 1 tasks
+22/02/18 02:55:55 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 13.0 (TID 13, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8356 b
+ytes)
+22/02/18 02:55:55 INFO storage.BlockManagerInfo: Added broadcast_18_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 12.4 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 13.0 (TID 13) in 222 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Removed TaskSet 13.0, whose tasks have all completed, from pool
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: ShuffleMapStage 13 (map at MobileAppStoreAnalysis.scala:122) finished in 0.236 s
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: running: Set()
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 15, ShuffleMapStage 14)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: failed: Set()
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 14 (MapPartitionsRDD[46] at sortBy at MobileAppStoreAnalysis.scala:125), which has no missing parents
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_19 stored as values in memory (estimated size 4.4 KB, free 364.4 MB)
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 2.5 KB, free 364.4 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_19_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 2.5 KB, free: 366.0 MB)
+22/02/18 02:55:56 INFO spark.SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 258
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 326
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 140
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 304
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 134
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 114
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 349
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 116
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 256
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 14 (MapPartitionsRDD[46] at sortBy at MobileAppStoreAnalysis.scala:125) (first 15 ta
+sks are for partitions Vector(0))
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 101
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Adding task set 14.0 with 1 tasks
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 226
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 149
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 259
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 360
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 291
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 280
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 14.0 (TID 14, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, NODE_LOCAL, 7662 byte
+s)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_10_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 11.9 KB, free: 366.0 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_10_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 11.9 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 52
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 162
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 103
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 312
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 315
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 212
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 127
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 59
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 243
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 227
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 342
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 194
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 132
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 123
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_12_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 12.1 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_12_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 12.1 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_19_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 2.5 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.1.2.103:60734
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 181
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 241
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 276
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 275
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 346
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 86
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 173
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 246
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 93
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 142
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 267
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 80
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 50
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 261
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 219
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 198
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 359
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 66
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 251
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 188
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 296
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 245
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 163
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 92
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 154
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 277
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 201
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 249
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 356
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 307
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 305
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 228
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 148
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_7_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 11.7 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_7_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 11.7 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_16_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 11.7 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_16_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 11.7 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 14.0 (TID 14) in 90 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Removed TaskSet 14.0, whose tasks have all completed, from pool
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: ShuffleMapStage 14 (sortBy at MobileAppStoreAnalysis.scala:125) finished in 0.109 s
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: running: Set()
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 15)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: failed: Set()
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting ResultStage 15 (MapPartitionsRDD[48] at sortBy at MobileAppStoreAnalysis.scala:125), which has no missing parents
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 324
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_20 stored as values in memory (estimated size 4.0 KB, free 364.6 MB)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 221
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 155
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_9_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 2.4 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_9_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 2.4 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 2.4 KB, free 364.6 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_20_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 2.4 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO spark.SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 15 (MapPartitionsRDD[48] at sortBy at MobileAppStoreAnalysis.scala:125) (first 15 tasks
+are for partitions Vector(0))
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Adding task set 15.0 with 1 tasks
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 147
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 274
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 292
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 58
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 161
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 117
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 151
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 106
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 282
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 266
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 165
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 303
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 330
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 15.0 (TID 15, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, NODE_LOCAL, 7673 byte
+s)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_15_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 11.9 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_15_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 11.9 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 341
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 145
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 168
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 120
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 69
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 308
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 352
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 289
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 247
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 233
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 178
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 204
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 144
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 172
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 319
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 85
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 238
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 109
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 263
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 195
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 104
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 236
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 183
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 290
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 229
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 269
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 130
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 111
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 81
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 278
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_14_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 12.1 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_14_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 12.1 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_20_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 2.4 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.1.2.103:60734
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 54
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 223
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 169
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 332
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 89
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 87
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 234
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 187
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 235
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 264
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 186
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 271
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 143
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 100
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 118
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 179
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 146
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 160
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 152
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 265
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 56
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 350
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 351
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 126
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 99
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 79
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_17_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 11.9 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_17_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 11.9 KB, free: 365.0 MB)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 262
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 216
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 137
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 97
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 209
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 242
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 286
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 170
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 121
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 182
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 202
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 321
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 82
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 107
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 51
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 177
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 306
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 90
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 215
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 287
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 285
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 176
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 124
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 345
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 309
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 283
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 293
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 68
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 255
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 174
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 268
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 273
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 119
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 185
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 295
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 240
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 237
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 88
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 133
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 156
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 313
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 316
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 232
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 175
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 159
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 248
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 361
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 128
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 158
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 300
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 46
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 91
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 199
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 167
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 197
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 208
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 203
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 3.4 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 3.4 KB, free: 365.1 MB)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 129
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 65
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 310
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 333
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 138
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 47
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 344
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 15.0 (TID 15) in 94 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Removed TaskSet 15.0, whose tasks have all completed, from pool
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: ResultStage 15 (collect at MobileAppStoreAnalysis.scala:127) finished in 0.106 s
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Job 12 finished: collect at MobileAppStoreAnalysis.scala:127, took 0.464464 s
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned shuffle 0
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 157
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 323
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 279
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 200
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 84
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 222
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 108
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 335
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 153
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 311
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 70
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 60
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 206
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 48
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 338
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 171
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 272
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 362
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 329
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 95
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 299
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 230
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 224
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 225
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 340
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 213
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 96
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 98
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 260
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 122
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 150
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 297
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 63
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 189
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 331
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 180
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 49
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 45
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 166
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 322
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 193
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 112
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 64
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 110
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 314
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 294
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 61
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 281
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 302
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 353
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 231
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 214
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 347
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 355
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 320
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 190
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 336
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 325
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 364
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 354
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 135
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 164
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 125
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 217
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 139
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 57
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 211
+(5.0,1.6455894308943124,1.5740893199796748E8)22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 328
+
+(4.5,1.802110401802427,2.1632241603379646E8)
+(4.0,2.209864698646936,2.3838793608856088E8)
+(3.5,1.757435897435901,2.0447049252421653E8)
+(3.0,1.288067885117496,1.6941689009660575E8)
+(2.5,1.1032142857142866,1.2382982716836734E8)
+(2.0,1.155754716981131,8.878507389622642E7)
+(1.5,1.2089285714285716,6.3979661125E7)
+(1.0,1.9265909090909084,6.311240145454545E7)
+(0.0,1.0801291711517784,1.5454625011194834E8)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 334
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 337
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 131
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_11_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 11.9 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_11_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 11.9 KB, free: 365.1 MB)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 257
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 270
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 205
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 136
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 53
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 327
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 244
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 343
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 184
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 317
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 102
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 254
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 284
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_13_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 11.9 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_13_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 11.9 KB, free: 365.1 MB)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 339
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 318
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 62
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_8_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 12.8 KB, free: 366.2 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_8_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 12.8 KB, free: 365.1 MB)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 253
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 210
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 357
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 363
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 191
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 358
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 67
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 113
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 141
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 207
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 105
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 218
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 252
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 288
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 83
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 115
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 192
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 55
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 298
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 239
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 250
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 196
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 94
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on ip-10-1-1-204.ap-south-1.compute.internal:44889 in memory (size: 32.4 KB, free: 366.2 MB)
+Average rating per app genres:
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on ip-10-1-2-103.ap-south-1.compute.internal:45388 in memory (size: 32.4 KB, free: 365.1 MB)
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 301
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 348
+22/02/18 02:55:56 INFO spark.ContextCleaner: Cleaned accumulator 220
+22/02/18 02:55:56 INFO spark.SparkContext: Starting job: collect at MobileAppStoreAnalysis.scala:146
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Registering RDD 49 (map at MobileAppStoreAnalysis.scala:138)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Registering RDD 52 (sortBy at MobileAppStoreAnalysis.scala:143)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Got job 13 (collect at MobileAppStoreAnalysis.scala:146) with 1 output partitions
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Final stage: ResultStage 18 (collect at MobileAppStoreAnalysis.scala:146)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 17)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 17)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 16 (MapPartitionsRDD[49] at map at MobileAppStoreAnalysis.scala:138), which has no missing parents
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_21 stored as values in memory (estimated size 29.3 KB, free 365.1 MB)
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 12.7 KB, free 365.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_21_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 12.7 KB, free: 366.2 MB)
+22/02/18 02:55:56 INFO spark.SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 16 (MapPartitionsRDD[49] at map at MobileAppStoreAnalysis.scala:138) (first 15 tasks
+ are for partitions Vector(0))
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Adding task set 16.0 with 1 tasks
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 16.0 (TID 16, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8356 b
+ytes)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_21_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 12.7 KB, free: 365.1 MB)
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 16.0 (TID 16) in 127 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Removed TaskSet 16.0, whose tasks have all completed, from pool
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: ShuffleMapStage 16 (map at MobileAppStoreAnalysis.scala:138) finished in 0.136 s
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: running: Set()
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 17, ResultStage 18)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: failed: Set()
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 17 (MapPartitionsRDD[52] at sortBy at MobileAppStoreAnalysis.scala:143), which has no missing parents
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_22 stored as values in memory (estimated size 30.9 KB, free 365.1 MB)
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 13.5 KB, free 365.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_22_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 13.5 KB, free: 366.2 MB)
+22/02/18 02:55:56 INFO spark.SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 17 (MapPartitionsRDD[52] at sortBy at MobileAppStoreAnalysis.scala:143) (first 15 ta
+sks are for partitions Vector(0))
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Adding task set 17.0 with 1 tasks
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 17.0 (TID 17, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, NODE_LOCAL, 7662 byte
+s)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_22_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 13.5 KB, free: 365.1 MB)
+22/02/18 02:55:56 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 10.1.2.103:60734
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 17.0 (TID 17) in 119 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Removed TaskSet 17.0, whose tasks have all completed, from pool
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: ShuffleMapStage 17 (sortBy at MobileAppStoreAnalysis.scala:143) finished in 0.132 s
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: running: Set()
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 18)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: failed: Set()
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting ResultStage 18 (MapPartitionsRDD[54] at sortBy at MobileAppStoreAnalysis.scala:143), which has no missing parents
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_23 stored as values in memory (estimated size 4.0 KB, free 365.1 MB)
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 2.3 KB, free 365.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_23_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 2.3 KB, free: 366.2 MB)
+22/02/18 02:55:56 INFO spark.SparkContext: Created broadcast 23 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 18 (MapPartitionsRDD[54] at sortBy at MobileAppStoreAnalysis.scala:143) (first 15 tasks
+are for partitions Vector(0))
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Adding task set 18.0 with 1 tasks
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 18.0 (TID 18, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, NODE_LOCAL, 7673 byte
+s)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_23_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 2.3 KB, free: 365.1 MB)
+22/02/18 02:55:56 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 10.1.2.103:60734
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 18.0 (TID 18) in 52 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Removed TaskSet 18.0, whose tasks have all completed, from pool
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: ResultStage 18 (collect at MobileAppStoreAnalysis.scala:146) finished in 0.064 s
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Job 13 finished: collect at MobileAppStoreAnalysis.scala:146, took 0.339224 s
+(Book,2.4776785714285716)
+(Business,3.745614035087719)
+(Catalogs,2.1)
+(Education,3.376379690949227)
+(Entertainment,3.2467289719626167)
+(Finance,2.4326923076923075)
+(Food & Drink,3.1825396825396823)
+(Games,3.6850077679958573)
+(Health & Fitness,3.7)
+(Lifestyle,2.8055555555555554)
+(Medical,3.369565217391304)
+(Music,3.9782608695652173)
+(Navigation,2.6847826086956523)
+(News,2.98)
+(Photo & Video,3.8008595988538683)
+(Productivity,4.00561797752809)
+(Reference,3.453125)
+(Shopping,3.540983606557377)
+(Social Networking,2.9850299401197606)
+(Sports,2.982456140350877)
+(Travel,3.376543209876543)
+(Utilities,3.278225806451613)
+(Weather,3.5972222222222223)
+Rating with average length of description
+22/02/18 02:55:56 INFO spark.SparkContext: Starting job: collect at MobileAppStoreAnalysis.scala:168
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Registering RDD 55 (map at MobileAppStoreAnalysis.scala:159)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Registering RDD 56 (map at MobileAppStoreAnalysis.scala:160)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Registering RDD 60 (map at MobileAppStoreAnalysis.scala:163)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Registering RDD 63 (sortBy at MobileAppStoreAnalysis.scala:166)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Got job 14 (collect at MobileAppStoreAnalysis.scala:168) with 1 output partitions
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Final stage: ResultStage 23 (collect at MobileAppStoreAnalysis.scala:168)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 22)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 22)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 19 (MapPartitionsRDD[55] at map at MobileAppStoreAnalysis.scala:159), which has no missing parents
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_24 stored as values in memory (estimated size 18.6 KB, free 365.1 MB)
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 9.2 KB, free 365.0 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_24_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 9.2 KB, free: 366.2 MB)
+22/02/18 02:55:56 INFO spark.SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 19 (MapPartitionsRDD[55] at map at MobileAppStoreAnalysis.scala:159) (first 15 tasks
+ are for partitions Vector(0))
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Adding task set 19.0 with 1 tasks
+22/02/18 02:55:56 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 19.0 (TID 19, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, NODE_LOCAL, 8368 byte
+s)
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 20 (MapPartitionsRDD[56] at map at MobileAppStoreAnalysis.scala:160), which has no missing parents
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_25 stored as values in memory (estimated size 28.3 KB, free 365.0 MB)
+22/02/18 02:55:56 INFO memory.MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 12.3 KB, free 365.0 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_25_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 12.3 KB, free: 366.1 MB)
+22/02/18 02:55:56 INFO spark.SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:56 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 20 (MapPartitionsRDD[56] at map at MobileAppStoreAnalysis.scala:160) (first 15 tasks
+ are for partitions Vector(0))
+22/02/18 02:55:56 INFO cluster.YarnScheduler: Adding task set 20.0 with 1 tasks
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_24_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 9.2 KB, free: 365.1 MB)
+22/02/18 02:55:56 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 32.3 KB, free: 365.1 MB)
+22/02/18 02:55:57 INFO storage.BlockManagerInfo: Added rdd_23_0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 16.4 MB, free: 348.7 MB)
+22/02/18 02:55:57 INFO spark.ExecutorAllocationManager: Requesting 2 new executors because tasks are backlogged (new desired total will be 2)
+22/02/18 02:55:57 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 20.0 (TID 20, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 8356 b
+ytes)
+22/02/18 02:55:57 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 19.0 (TID 19) in 1152 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:57 INFO cluster.YarnScheduler: Removed TaskSet 19.0, whose tasks have all completed, from pool
+22/02/18 02:55:57 INFO scheduler.DAGScheduler: ShuffleMapStage 19 (map at MobileAppStoreAnalysis.scala:159) finished in 1.172 s
+22/02/18 02:55:57 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/02/18 02:55:57 INFO scheduler.DAGScheduler: running: Set(ShuffleMapStage 20)
+22/02/18 02:55:57 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 21, ShuffleMapStage 22, ResultStage 23)
+22/02/18 02:55:57 INFO scheduler.DAGScheduler: failed: Set()
+22/02/18 02:55:58 INFO storage.BlockManagerInfo: Added broadcast_25_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 12.3 KB, free: 348.7 MB)
+22/02/18 02:55:58 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 20.0 (TID 20) in 118 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:58 INFO cluster.YarnScheduler: Removed TaskSet 20.0, whose tasks have all completed, from pool
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: ShuffleMapStage 20 (map at MobileAppStoreAnalysis.scala:160) finished in 1.267 s
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: running: Set()
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 21, ShuffleMapStage 22, ResultStage 23)
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: failed: Set()
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 21 (MapPartitionsRDD[60] at map at MobileAppStoreAnalysis.scala:163), which has no missing parents
+22/02/18 02:55:58 INFO memory.MemoryStore: Block broadcast_26 stored as values in memory (estimated size 4.0 KB, free 365.0 MB)
+22/02/18 02:55:58 INFO memory.MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 2.3 KB, free 365.0 MB)
+22/02/18 02:55:58 INFO storage.BlockManagerInfo: Added broadcast_26_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 2.3 KB, free: 366.1 MB)
+22/02/18 02:55:58 INFO spark.SparkContext: Created broadcast 26 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 21 (MapPartitionsRDD[60] at map at MobileAppStoreAnalysis.scala:163) (first 15 tasks
+ are for partitions Vector(0))
+22/02/18 02:55:58 INFO cluster.YarnScheduler: Adding task set 21.0 with 1 tasks
+22/02/18 02:55:58 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 21.0 (TID 21, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, PROCESS_LOCAL, 7725 b
+ytes)
+22/02/18 02:55:58 INFO storage.BlockManagerInfo: Added broadcast_26_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 2.3 KB, free: 348.7 MB)
+22/02/18 02:55:58 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 5 to 10.1.2.103:60734
+22/02/18 02:55:58 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 10.1.2.103:60734
+22/02/18 02:55:58 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 21.0 (TID 21) in 330 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:58 INFO cluster.YarnScheduler: Removed TaskSet 21.0, whose tasks have all completed, from pool
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: ShuffleMapStage 21 (map at MobileAppStoreAnalysis.scala:163) finished in 0.339 s
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: running: Set()
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 22, ResultStage 23)
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: failed: Set()
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 22 (MapPartitionsRDD[63] at sortBy at MobileAppStoreAnalysis.scala:166), which has no missing parents
+22/02/18 02:55:58 INFO memory.MemoryStore: Block broadcast_27 stored as values in memory (estimated size 4.3 KB, free 365.0 MB)
+22/02/18 02:55:58 INFO memory.MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 2.5 KB, free 365.0 MB)
+22/02/18 02:55:58 INFO storage.BlockManagerInfo: Added broadcast_27_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 2.5 KB, free: 366.1 MB)
+22/02/18 02:55:58 INFO spark.SparkContext: Created broadcast 27 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 22 (MapPartitionsRDD[63] at sortBy at MobileAppStoreAnalysis.scala:166) (first 15 ta
+sks are for partitions Vector(0))
+22/02/18 02:55:58 INFO cluster.YarnScheduler: Adding task set 22.0 with 1 tasks
+22/02/18 02:55:58 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 22.0 (TID 22, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, NODE_LOCAL, 7662 byte
+s)
+22/02/18 02:55:58 INFO storage.BlockManagerInfo: Added broadcast_27_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 2.5 KB, free: 348.7 MB)
+22/02/18 02:55:58 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 8 to 10.1.2.103:60734
+22/02/18 02:55:58 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 22.0 (TID 22) in 47 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:58 INFO cluster.YarnScheduler: Removed TaskSet 22.0, whose tasks have all completed, from pool
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: ShuffleMapStage 22 (sortBy at MobileAppStoreAnalysis.scala:166) finished in 0.055 s
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: running: Set()
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 23)
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: failed: Set()
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: Submitting ResultStage 23 (MapPartitionsRDD[65] at sortBy at MobileAppStoreAnalysis.scala:166), which has no missing parents
+22/02/18 02:55:58 INFO memory.MemoryStore: Block broadcast_28 stored as values in memory (estimated size 4.0 KB, free 365.0 MB)
+22/02/18 02:55:58 INFO memory.MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 2.3 KB, free 365.0 MB)
+22/02/18 02:55:58 INFO storage.BlockManagerInfo: Added broadcast_28_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:44889 (size: 2.3 KB, free: 366.1 MB)
+22/02/18 02:55:58 INFO spark.SparkContext: Created broadcast 28 from broadcast at DAGScheduler.scala:1164
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 23 (MapPartitionsRDD[65] at sortBy at MobileAppStoreAnalysis.scala:166) (first 15 tasks
+are for partitions Vector(0))
+22/02/18 02:55:58 INFO cluster.YarnScheduler: Adding task set 23.0 with 1 tasks
+22/02/18 02:55:58 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 23.0 (TID 23, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, NODE_LOCAL, 7673 byte
+s)
+22/02/18 02:55:58 INFO storage.BlockManagerInfo: Added broadcast_28_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:45388 (size: 2.3 KB, free: 348.7 MB)
+22/02/18 02:55:58 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 7 to 10.1.2.103:60734
+22/02/18 02:55:58 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 23.0 (TID 23) in 42 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/1)
+22/02/18 02:55:58 INFO cluster.YarnScheduler: Removed TaskSet 23.0, whose tasks have all completed, from pool
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: ResultStage 23 (collect at MobileAppStoreAnalysis.scala:168) finished in 0.051 s
+22/02/18 02:55:58 INFO scheduler.DAGScheduler: Job 14 finished: collect at MobileAppStoreAnalysis.scala:168, took 1.744513 s
+(5.0,1675.7256097560976)
+(4.5,1824.1224183251973)
+(4.0,1823.5012300123)
+(3.5,1653.042735042735)
+(3.0,1525.6553524804178)
+(2.5,1502.9234693877552)
+(2.0,1302.9150943396226)
+(1.5,1214.875)
+(1.0,1278.1818181818182)
+(0.0,1695.9935414424112)
+22/02/18 02:55:58 INFO spark.SparkContext: Invoking stop() from shutdown hook
+22/02/18 02:55:58 INFO cluster.YarnClientSchedulerBackend: Interrupting monitor thread
+22/02/18 02:55:58 INFO cluster.YarnClientSchedulerBackend: Shutting down all executors
+22/02/18 02:55:58 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+22/02/18 02:55:58 INFO cluster.SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+22/02/18 02:55:58 INFO cluster.YarnClientSchedulerBackend: Stopped
+22/02/18 02:55:58 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/02/18 02:55:58 INFO memory.MemoryStore: MemoryStore cleared
+22/02/18 02:55:58 INFO storage.BlockManager: BlockManager stopped
+22/02/18 02:55:58 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+22/02/18 02:55:58 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/02/18 02:55:58 INFO spark.SparkContext: Successfully stopped SparkContext
+22/02/18 02:55:58 INFO util.ShutdownHookManager: Shutdown hook called
+22/02/18 02:55:58 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-890d95b2-553c-4c3b-9c00-6ec3f89654ef
+22/02/18 02:55:58 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-a5ec23bd-cd08-4ed6-8eaa-ac7068c5775b

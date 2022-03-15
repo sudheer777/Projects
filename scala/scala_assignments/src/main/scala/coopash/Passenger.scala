@@ -1,3 +1,5 @@
+package coopash
+
 import org.apache.spark.sql.functions.udf
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{DataFrame, SQLContext}
@@ -144,7 +146,7 @@ object Passenger {
       val d = date.substring(6)
       s"$d/$m/$y"
     }
-    
+
     // assume including from and to dates as well
     def flownTogether(flightDataDf: DataFrame, atLeastNTimes: Int, from: String, to: String): DataFrame = {
       val fromConv = convertDateFormat(from)

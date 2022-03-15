@@ -1,0 +1,484 @@
+spark-submit --class "TelecomRddAnalysis" --master yarn target/scala-2.11/telecomrddanalysis_2.11-0.1.0.jar
+
+22/03/04 12:19:05 INFO spark.SparkContext: Running Spark version 2.4.0-cdh6.2.1
+22/03/04 12:19:06 INFO logging.DriverLogger: Added a local log appender at: /tmp/spark-aeb27d8c-4bd6-4a68-9c35-e4a05dfe0823/__driver_logs__/driver.log
+22/03/04 12:19:06 INFO spark.SparkContext: Submitted application: Telecom Spark RDD
+22/03/04 12:19:06 INFO spark.SecurityManager: Changing view acls to: educlbdhid0018
+22/03/04 12:19:06 INFO spark.SecurityManager: Changing modify acls to: educlbdhid0018
+22/03/04 12:19:06 INFO spark.SecurityManager: Changing view acls groups to:
+22/03/04 12:19:06 INFO spark.SecurityManager: Changing modify acls groups to:
+22/03/04 12:19:06 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(educlbdhid0018); groups with view per
+missions: Set(); users  with modify permissions: Set(educlbdhid0018); groups with modify permissions: Set()
+22/03/04 12:19:06 INFO util.Utils: Successfully started service 'sparkDriver' on port 46549.
+22/03/04 12:19:06 INFO spark.SparkEnv: Registering MapOutputTracker
+22/03/04 12:19:06 INFO spark.SparkEnv: Registering BlockManagerMaster
+22/03/04 12:19:06 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/03/04 12:19:06 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/03/04 12:19:06 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-6ce61254-4c43-46e3-8dcd-ac1a4d476b20
+22/03/04 12:19:06 INFO memory.MemoryStore: MemoryStore started with capacity 366.3 MB
+22/03/04 12:19:06 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+22/03/04 12:19:06 INFO spark.SparkContext: Added JAR file:/home/educlbdhid0018/telecom_rdd/target/scala-2.11/telecomrddanalysis_2.11-0.1.0.jar at spark://ip-10-1-1-204.ap-south-
+1.compute.internal:46549/jars/telecomrddanalysis_2.11-0.1.0.jar with timestamp 1646396346605
+22/03/04 12:19:06 INFO util.Utils: Using initial executors = 0, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instance
+s
+22/03/04 12:19:07 INFO client.RMProxy: Connecting to ResourceManager at ip-10-1-1-204.ap-south-1.compute.internal/10.1.1.204:8032
+22/03/04 12:19:08 INFO yarn.Client: Requesting a new application from cluster with 5 NodeManagers
+22/03/04 12:19:08 INFO conf.Configuration: resource-types.xml not found
+22/03/04 12:19:08 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+22/03/04 12:19:08 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (6144 MB per container)
+22/03/04 12:19:08 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+22/03/04 12:19:08 INFO yarn.Client: Setting up container launch context for our AM
+22/03/04 12:19:08 INFO yarn.Client: Setting up the launch environment for our AM container
+22/03/04 12:19:08 INFO yarn.Client: Preparing resources for our AM container
+22/03/04 12:19:08 INFO yarn.Client: Uploading resource file:/tmp/spark-aeb27d8c-4bd6-4a68-9c35-e4a05dfe0823/__spark_conf__9079546840715544350.zip -> hdfs://nameservice1/user/edu
+clbdhid0018/.sparkStaging/application_1644201200461_4262/__spark_conf__.zip
+22/03/04 12:19:08 INFO spark.SecurityManager: Changing view acls to: educlbdhid0018
+22/03/04 12:19:08 INFO spark.SecurityManager: Changing modify acls to: educlbdhid0018
+22/03/04 12:19:08 INFO spark.SecurityManager: Changing view acls groups to:
+22/03/04 12:19:08 INFO spark.SecurityManager: Changing modify acls groups to:
+22/03/04 12:19:08 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(educlbdhid0018); groups with view per
+missions: Set(); users  with modify permissions: Set(educlbdhid0018); groups with modify permissions: Set()
+22/03/04 12:19:08 INFO yarn.Client: Submitting application application_1644201200461_4262 to ResourceManager
+22/03/04 12:19:08 INFO impl.YarnClientImpl: Submitted application application_1644201200461_4262
+22/03/04 12:19:09 INFO yarn.Client: Application report for application_1644201200461_4262 (state: ACCEPTED)
+22/03/04 12:19:09 INFO yarn.Client:
+         client token: N/A
+         diagnostics: AM container is launched, waiting for AM container to Register with RM
+         ApplicationMaster host: N/A
+         ApplicationMaster RPC port: -1
+         queue: root.default
+         start time: 1646396348729
+         final status: UNDEFINED
+         tracking URL: http://ip-10-1-1-204.ap-south-1.compute.internal:6066/proxy/application_1644201200461_4262/
+         user: educlbdhid0018
+22/03/04 12:19:10 INFO yarn.Client: Application report for application_1644201200461_4262 (state: ACCEPTED)
+22/03/04 12:19:11 INFO yarn.Client: Application report for application_1644201200461_4262 (state: ACCEPTED)
+22/03/04 12:19:12 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> ip-10-1-1-204.ap-sout
+h-1.compute.internal, PROXY_URI_BASES -> http://ip-10-1-1-204.ap-south-1.compute.internal:6066/proxy/application_1644201200461_4262), /proxy/application_1644201200461_4262
+22/03/04 12:19:12 INFO yarn.Client: Application report for application_1644201200461_4262 (state: RUNNING)
+22/03/04 12:19:12 INFO yarn.Client:
+         client token: N/A
+         diagnostics: N/A
+         ApplicationMaster host: 10.1.2.194
+         ApplicationMaster RPC port: -1
+         queue: root.default
+         start time: 1646396348729
+         final status: UNDEFINED
+         tracking URL: http://ip-10-1-1-204.ap-south-1.compute.internal:6066/proxy/application_1644201200461_4262/
+         user: educlbdhid0018
+22/03/04 12:19:12 INFO cluster.YarnClientSchedulerBackend: Application application_1644201200461_4262 has started running.
+22/03/04 12:19:12 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1644201200461_4262 and attemptId None
+22/03/04 12:19:12 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42684.
+22/03/04 12:19:12 INFO netty.NettyBlockTransferService: Server created on ip-10-1-1-204.ap-south-1.compute.internal:42684
+22/03/04 12:19:12 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/03/04 12:19:12 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ip-10-1-1-204.ap-south-1.compute.internal, 42684, None)
+22/03/04 12:19:12 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-10-1-1-204.ap-south-1.compute.internal:42684 with 366.3 MB RAM, BlockManagerId(driver, ip
+-10-1-1-204.ap-south-1.compute.internal, 42684, None)
+22/03/04 12:19:12 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ip-10-1-1-204.ap-south-1.compute.internal, 42684, None)
+22/03/04 12:19:12 INFO storage.BlockManager: external shuffle service port = 7337
+22/03/04 12:19:12 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, ip-10-1-1-204.ap-south-1.compute.internal, 42684, None)
+22/03/04 12:19:13 INFO util.log: Logging initialized @8358ms
+22/03/04 12:19:13 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+22/03/04 12:19:13 INFO scheduler.EventLoggingListener: Logging events to hdfs://nameservice1/user/spark/applicationHistory/application_1644201200461_4262
+22/03/04 12:19:13 INFO util.Utils: Using initial executors = 0, max of spark.dynamicAllocation.initialExecutors, spark.dynamicAllocation.minExecutors and spark.executor.instance
+s
+22/03/04 12:19:13 INFO spark.SparkContext: Registered listener com.cloudera.spark.lineage.NavigatorAppListener
+22/03/04 12:19:13 INFO logging.DriverLogger$DfsAsyncWriter: Started driver log file sync to: /user/spark/driverLogs/application_1644201200461_4262_driver.log
+22/03/04 12:19:13 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+22/03/04 12:19:13 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 294.7 KB, free 366.0 MB)
+22/03/04 12:19:14 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 28.1 KB, free 366.0 MB)
+22/03/04 12:19:14 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 28.1 KB, free: 366.3 MB)
+22/03/04 12:19:14 INFO spark.SparkContext: Created broadcast 0 from textFile at TelecomRddAnalysis.scala:34
+22/03/04 12:19:14 INFO mapred.FileInputFormat: Total input files to process : 1
+22/03/04 12:19:14 INFO spark.SparkContext: Starting job: count at TelecomRddAnalysis.scala:67
+22/03/04 12:19:14 INFO scheduler.DAGScheduler: Got job 0 (count at TelecomRddAnalysis.scala:67) with 4 output partitions
+22/03/04 12:19:14 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (count at TelecomRddAnalysis.scala:67)
+22/03/04 12:19:14 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/03/04 12:19:14 INFO scheduler.DAGScheduler: Missing parents: List()
+22/03/04 12:19:14 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[2] at map at TelecomRddAnalysis.scala:35), which has no missing parents
+22/03/04 12:19:14 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.6 KB, free 366.0 MB)
+22/03/04 12:19:14 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KB, free 366.0 MB)
+22/03/04 12:19:14 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 2.2 KB, free: 366.3 MB)
+22/03/04 12:19:14 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:19:14 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at map at TelecomRddAnalysis.scala:35) (first 15 tasks are for
+partitions Vector(0, 1, 2, 3))
+22/03/04 12:19:14 INFO cluster.YarnScheduler: Adding task set 0.0 with 4 tasks
+22/03/04 12:19:15 INFO spark.ExecutorAllocationManager: Requesting 1 new executor because tasks are backlogged (new desired total will be 1)
+22/03/04 12:19:16 INFO spark.ExecutorAllocationManager: Requesting 2 new executors because tasks are backlogged (new desired total will be 3)
+22/03/04 12:19:17 INFO spark.ExecutorAllocationManager: Requesting 1 new executor because tasks are backlogged (new desired total will be 4)
+22/03/04 12:19:29 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.1.2.103:53574) with ID 2
+22/03/04 12:19:29 INFO spark.ExecutorAllocationManager: New executor 2 has registered (new total is 1)
+22/03/04 12:19:29 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 0.0 (TID 0, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 3, NODE_LOCAL, 7947 byte
+s)
+22/03/04 12:19:29 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.1.2.103:53480) with ID 1
+22/03/04 12:19:29 INFO spark.ExecutorAllocationManager: New executor 1 has registered (new total is 2)
+22/03/04 12:19:29 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-10-1-2-103.ap-south-1.compute.internal:44624 with 366.3 MB RAM, BlockManagerId(2, ip-10-1
+-2-103.ap-south-1.compute.internal, 44624, None)
+22/03/04 12:19:30 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.1.2.103:53604) with ID 3
+22/03/04 12:19:30 INFO spark.ExecutorAllocationManager: New executor 3 has registered (new total is 3)
+22/03/04 12:19:30 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-10-1-2-103.ap-south-1.compute.internal:33407 with 366.3 MB RAM, BlockManagerId(1, ip-10-1
+-2-103.ap-south-1.compute.internal, 33407, None)
+22/03/04 12:19:30 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-10-1-2-103.ap-south-1.compute.internal:33797 with 366.3 MB RAM, BlockManagerId(3, ip-10-1
+-2-103.ap-south-1.compute.internal, 33797, None)
+22/03/04 12:19:31 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 2.2 KB, free: 366.3 MB)
+22/03/04 12:19:31 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.1.2.103:53800) with ID 4
+22/03/04 12:19:31 INFO spark.ExecutorAllocationManager: New executor 4 has registered (new total is 4)
+22/03/04 12:19:32 INFO storage.BlockManagerMasterEndpoint: Registering block manager ip-10-1-2-103.ap-south-1.compute.internal:33787 with 366.3 MB RAM, BlockManagerId(4, ip-10-1
+-2-103.ap-south-1.compute.internal, 33787, None)
+22/03/04 12:19:32 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 1, ip-10-1-2-103.ap-south-1.compute.internal, executor 3, partition 0, RACK_LOCAL, 7947 byte
+s)
+22/03/04 12:19:32 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 2, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 1, RACK_LOCAL, 7947 byte
+s)
+22/03/04 12:19:32 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 0.0 (TID 3, ip-10-1-2-103.ap-south-1.compute.internal, executor 4, partition 2, RACK_LOCAL, 7947 byte
+s)
+22/03/04 12:19:33 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 28.1 KB, free: 366.3 MB)
+22/03/04 12:19:34 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33797 (size: 2.2 KB, free: 366.3 MB)
+22/03/04 12:19:34 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 2.2 KB, free: 366.3 MB)
+22/03/04 12:19:34 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33407 (size: 2.2 KB, free: 366.3 MB)
+22/03/04 12:19:35 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33797 (size: 28.1 KB, free: 366.3 MB)
+22/03/04 12:19:37 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 28.1 KB, free: 366.3 MB)
+22/03/04 12:19:37 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33407 (size: 28.1 KB, free: 366.3 MB)
+22/03/04 12:20:03 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 0.0 (TID 0) in 33918 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (1/4)
+22/03/04 12:20:08 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 1) in 36157 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 3) (2/4)
+22/03/04 12:20:09 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 2) in 36352 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (3/4)
+22/03/04 12:20:09 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 0.0 (TID 3) in 36480 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 4) (4/4)
+22/03/04 12:20:09 INFO cluster.YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool
+22/03/04 12:20:09 INFO scheduler.DAGScheduler: ResultStage 0 (count at TelecomRddAnalysis.scala:67) finished in 54.937 s
+22/03/04 12:20:09 INFO scheduler.DAGScheduler: Job 0 finished: count at TelecomRddAnalysis.scala:67, took 54.993523 s
+Record count: 2338006
+22/03/04 12:20:09 INFO spark.SparkContext: Starting job: count at TelecomRddAnalysis.scala:78
+22/03/04 12:20:09 INFO scheduler.DAGScheduler: Got job 1 (count at TelecomRddAnalysis.scala:78) with 4 output partitions
+22/03/04 12:20:09 INFO scheduler.DAGScheduler: Final stage: ResultStage 1 (count at TelecomRddAnalysis.scala:78)
+22/03/04 12:20:09 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/03/04 12:20:09 INFO scheduler.DAGScheduler: Missing parents: List()
+22/03/04 12:20:09 INFO scheduler.DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at filter at TelecomRddAnalysis.scala:78), which has no missing parents
+22/03/04 12:20:09 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.8 KB, free 366.0 MB)
+22/03/04 12:20:09 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.3 KB, free 366.0 MB)
+22/03/04 12:20:09 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:09 INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:20:09 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at filter at TelecomRddAnalysis.scala:78) (first 15 tasks are f
+or partitions Vector(0, 1, 2, 3))
+22/03/04 12:20:09 INFO cluster.YarnScheduler: Adding task set 1.0 with 4 tasks
+22/03/04 12:20:09 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 1.0 (TID 4, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 3, NODE_LOCAL, 7947 byte
+s)
+22/03/04 12:20:09 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:10 INFO spark.ExecutorAllocationManager: Requesting 3 new executors because tasks are backlogged (new desired total will be 4)
+22/03/04 12:20:12 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 5, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, RACK_LOCAL, 7947 byte
+s)
+22/03/04 12:20:12 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 1.0 (TID 6, ip-10-1-2-103.ap-south-1.compute.internal, executor 3, partition 1, RACK_LOCAL, 7947 byte
+s)
+22/03/04 12:20:12 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 1.0 (TID 7, ip-10-1-2-103.ap-south-1.compute.internal, executor 4, partition 2, RACK_LOCAL, 7947 byte
+s)
+22/03/04 12:20:12 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33797 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:12 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:12 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33407 (size: 2.3 KB, free: 366.3 MB)
+
+22/03/04 12:20:17 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 1.0 (TID 4) in 8089 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (1/4)
+22/03/04 12:20:28 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 1.0 (TID 7) in 15666 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 4) (2/4)
+22/03/04 12:20:28 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 1.0 (TID 6) in 15919 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 3) (3/4)
+22/03/04 12:20:28 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 5) in 16294 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (4/4)
+22/03/04 12:20:28 INFO cluster.YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool
+22/03/04 12:20:28 INFO scheduler.DAGScheduler: ResultStage 1 (count at TelecomRddAnalysis.scala:78) finished in 19.786 s
+22/03/04 12:20:28 INFO scheduler.DAGScheduler: Job 1 finished: count at TelecomRddAnalysis.scala:78, took 19.791128 s
+There are '227089' 404 HTTP codes are in access logs
+22/03/04 12:20:28 INFO spark.SparkContext: Starting job: count at TelecomRddAnalysis.scala:93
+22/03/04 12:20:28 INFO scheduler.DAGScheduler: Got job 2 (count at TelecomRddAnalysis.scala:93) with 4 output partitions
+22/03/04 12:20:28 INFO scheduler.DAGScheduler: Final stage: ResultStage 2 (count at TelecomRddAnalysis.scala:93)
+22/03/04 12:20:28 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/03/04 12:20:28 INFO scheduler.DAGScheduler: Missing parents: List()
+22/03/04 12:20:28 INFO scheduler.DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[6] at map at TelecomRddAnalysis.scala:92), which has no missing parents
+22/03/04 12:20:29 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 4.0 KB, free 366.0 MB)
+22/03/04 12:20:29 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.3 KB, free 366.0 MB)
+22/03/04 12:20:29 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:29 INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:20:29 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ResultStage 2 (MapPartitionsRDD[6] at map at TelecomRddAnalysis.scala:92) (first 15 tasks are for
+partitions Vector(0, 1, 2, 3))
+22/03/04 12:20:29 INFO cluster.YarnScheduler: Adding task set 2.0 with 4 tasks
+22/03/04 12:20:29 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 2.0 (TID 8, ip-10-1-2-103.ap-south-1.compute.internal, executor 3, partition 3, NODE_LOCAL, 7947 byte
+s)
+22/03/04 12:20:29 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33797 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:30 INFO spark.ExecutorAllocationManager: Requesting 3 new executors because tasks are backlogged (new desired total will be 4)
+22/03/04 12:20:32 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 9, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 0, RACK_LOCAL, 7947 byte
+s)
+22/03/04 12:20:32 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 2.0 (TID 10, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 1, RACK_LOCAL, 7947 byt
+es)
+22/03/04 12:20:32 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 2.0 (TID 11, ip-10-1-2-103.ap-south-1.compute.internal, executor 4, partition 2, RACK_LOCAL, 7947 byt
+es)
+22/03/04 12:20:32 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:32 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:32 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33407 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:33 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 2.0 (TID 8) in 4408 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 3) (1/4)
+22/03/04 12:20:44 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 2.0 (TID 11) in 12041 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 4) (2/4)
+22/03/04 12:20:46 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 2.0 (TID 9) in 13398 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (3/4)
+22/03/04 12:20:46 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 2.0 (TID 10) in 13424 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (4/4)
+22/03/04 12:20:46 INFO cluster.YarnScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool
+22/03/04 12:20:46 INFO scheduler.DAGScheduler: ResultStage 2 (count at TelecomRddAnalysis.scala:93) finished in 17.112 s
+22/03/04 12:20:46 INFO scheduler.DAGScheduler: Job 2 finished: count at TelecomRddAnalysis.scala:93, took 17.116700 s
+There are total of 133758 broken
+22/03/04 12:20:46 INFO spark.SparkContext: Starting job: count at TelecomRddAnalysis.scala:107
+22/03/04 12:20:46 INFO scheduler.DAGScheduler: Got job 3 (count at TelecomRddAnalysis.scala:107) with 4 output partitions
+22/03/04 12:20:46 INFO scheduler.DAGScheduler: Final stage: ResultStage 3 (count at TelecomRddAnalysis.scala:107)
+22/03/04 12:20:46 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/03/04 12:20:46 INFO scheduler.DAGScheduler: Missing parents: List()
+22/03/04 12:20:46 INFO scheduler.DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[8] at map at TelecomRddAnalysis.scala:106), which has no missing parents
+22/03/04 12:20:46 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.9 KB, free 366.0 MB)
+22/03/04 12:20:46 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.3 KB, free 366.0 MB)
+22/03/04 12:20:46 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:46 INFO spark.SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:20:46 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ResultStage 3 (MapPartitionsRDD[8] at map at TelecomRddAnalysis.scala:106) (first 15 tasks are for
+ partitions Vector(0, 1, 2, 3))
+22/03/04 12:20:46 INFO cluster.YarnScheduler: Adding task set 3.0 with 4 tasks
+22/03/04 12:20:46 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 3.0 (TID 12, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 3, NODE_LOCAL, 7947 byt
+es)
+22/03/04 12:20:46 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:47 INFO spark.ExecutorAllocationManager: Requesting 3 new executors because tasks are backlogged (new desired total will be 4)
+22/03/04 12:20:49 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 3.0 (TID 13, ip-10-1-2-103.ap-south-1.compute.internal, executor 4, partition 0, RACK_LOCAL, 7947 byt
+es)
+22/03/04 12:20:49 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 3.0 (TID 14, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 1, RACK_LOCAL, 7947 byt
+es)
+22/03/04 12:20:49 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 3.0 (TID 15, ip-10-1-2-103.ap-south-1.compute.internal, executor 3, partition 2, RACK_LOCAL, 7947 byt
+es)
+22/03/04 12:20:49 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:49 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33407 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:49 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33797 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:20:52 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 3.0 (TID 12) in 6597 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (1/4)
+22/03/04 12:21:02 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 3.0 (TID 15) in 12523 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 3) (2/4)
+22/03/04 12:21:02 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 3.0 (TID 13) in 12892 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 4) (3/4)
+22/03/04 12:21:03 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 3.0 (TID 14) in 13703 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (4/4)
+22/03/04 12:21:03 INFO cluster.YarnScheduler: Removed TaskSet 3.0, whose tasks have all completed, from pool
+22/03/04 12:21:03 INFO scheduler.DAGScheduler: ResultStage 3 (count at TelecomRddAnalysis.scala:107) finished in 17.264 s
+22/03/04 12:21:03 INFO scheduler.DAGScheduler: Job 3 finished: count at TelecomRddAnalysis.scala:107, took 17.268726 s
+There are total of 683871 where url column is null and empty string is a null column for all rows
+22/03/04 12:21:03 INFO spark.SparkContext: Starting job: count at TelecomRddAnalysis.scala:124
+22/03/04 12:21:03 INFO scheduler.DAGScheduler: Got job 4 (count at TelecomRddAnalysis.scala:124) with 4 output partitions
+22/03/04 12:21:03 INFO scheduler.DAGScheduler: Final stage: ResultStage 4 (count at TelecomRddAnalysis.scala:124)
+22/03/04 12:21:03 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/03/04 12:21:03 INFO scheduler.DAGScheduler: Missing parents: List()
+22/03/04 12:21:03 INFO scheduler.DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[10] at filter at TelecomRddAnalysis.scala:124), which has no missing parents
+22/03/04 12:21:03 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 3.9 KB, free 366.0 MB)
+22/03/04 12:21:03 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.3 KB, free 366.0 MB)
+22/03/04 12:21:03 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:21:03 INFO spark.SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:21:03 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ResultStage 4 (MapPartitionsRDD[10] at filter at TelecomRddAnalysis.scala:124) (first 15 tasks are
+ for partitions Vector(0, 1, 2, 3))
+22/03/04 12:21:03 INFO cluster.YarnScheduler: Adding task set 4.0 with 4 tasks
+22/03/04 12:21:03 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 4.0 (TID 16, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 3, NODE_LOCAL, 7947 byt
+es)
+22/03/04 12:21:03 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:21:04 INFO spark.ExecutorAllocationManager: Requesting 3 new executors because tasks are backlogged (new desired total will be 4)
+22/03/04 12:21:06 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 17, ip-10-1-2-103.ap-south-1.compute.internal, executor 3, partition 0, RACK_LOCAL, 7947 byt
+es)
+22/03/04 12:21:06 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 4.0 (TID 18, ip-10-1-2-103.ap-south-1.compute.internal, executor 4, partition 1, RACK_LOCAL, 7947 byt
+es)
+22/03/04 12:21:06 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 4.0 (TID 19, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 2, RACK_LOCAL, 7947 byt
+es)
+22/03/04 12:21:06 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33407 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:21:06 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33797 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:21:06 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:21:09 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 4.0 (TID 16) in 6332 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (1/4)
+22/03/04 12:21:19 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 17) in 12846 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 3) (2/4)
+22/03/04 12:21:21 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 4.0 (TID 19) in 14396 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (3/4)
+22/03/04 12:21:21 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 4.0 (TID 18) in 14598 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 4) (4/4)
+22/03/04 12:21:21 INFO cluster.YarnScheduler: Removed TaskSet 4.0, whose tasks have all completed, from pool
+22/03/04 12:21:21 INFO scheduler.DAGScheduler: ResultStage 4 (count at TelecomRddAnalysis.scala:124) finished in 17.879 s
+22/03/04 12:21:21 INFO scheduler.DAGScheduler: Job 4 finished: count at TelecomRddAnalysis.scala:124, took 17.883771 s
+Replaced null values with constants. no null count: 0 (this should be 0)
+Parse timestamp to readable date Done. Printing top 10 rows date
+22/03/04 12:21:21 INFO spark.SparkContext: Starting job: take at TelecomRddAnalysis.scala:164
+22/03/04 12:21:21 INFO scheduler.DAGScheduler: Got job 5 (take at TelecomRddAnalysis.scala:164) with 1 output partitions
+22/03/04 12:21:21 INFO scheduler.DAGScheduler: Final stage: ResultStage 5 (take at TelecomRddAnalysis.scala:164)
+22/03/04 12:21:21 INFO scheduler.DAGScheduler: Parents of final stage: List()
+22/03/04 12:21:21 INFO scheduler.DAGScheduler: Missing parents: List()
+22/03/04 12:21:21 INFO scheduler.DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[11] at map at TelecomRddAnalysis.scala:159), which has no missing parents
+22/03/04 12:21:21 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 3.9 KB, free 366.0 MB)
+22/03/04 12:21:21 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 2.3 KB, free 365.9 MB)
+22/03/04 12:21:21 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:21:21 INFO spark.SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:21:21 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[11] at map at TelecomRddAnalysis.scala:159) (first 15 tasks are fo
+r partitions Vector(0))
+22/03/04 12:21:21 INFO cluster.YarnScheduler: Adding task set 5.0 with 1 tasks
+22/03/04 12:21:21 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.0 (TID 20, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 0, RACK_LOCAL, 7947 byt
+es)
+22/03/04 12:21:21 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:21:24 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 5.0 (TID 20) in 3391 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (1/1)
+22/03/04 12:21:24 INFO cluster.YarnScheduler: Removed TaskSet 5.0, whose tasks have all completed, from pool
+22/03/04 12:21:24 INFO scheduler.DAGScheduler: ResultStage 5 (take at TelecomRddAnalysis.scala:164) finished in 3.407 s
+22/03/04 12:21:24 INFO scheduler.DAGScheduler: Job 5 finished: take at TelecomRddAnalysis.scala:164, took 3.411284 s
+Date converted: 2015-12-12
+Date converted: 2015-12-12
+Date converted: 2015-12-12
+Date converted: 2015-12-12
+Date converted: 2015-12-12
+Date converted: 2015-12-12
+Date converted: 2015-12-12
+Date converted: 2015-12-12
+Date converted: 2015-12-12
+Date converted: 2015-12-12
+22/03/04 12:21:24 INFO spark.SparkContext: Starting job: collect at TelecomRddAnalysis.scala:180
+22/03/04 12:21:24 INFO scheduler.DAGScheduler: Registering RDD 14 (map at TelecomRddAnalysis.scala:178)
+22/03/04 12:21:24 INFO scheduler.DAGScheduler: Got job 6 (collect at TelecomRddAnalysis.scala:180) with 4 output partitions
+22/03/04 12:21:24 INFO scheduler.DAGScheduler: Final stage: ResultStage 7 (collect at TelecomRddAnalysis.scala:180)
+22/03/04 12:21:24 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 6)
+22/03/04 12:21:24 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 6)
+22/03/04 12:21:24 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[14] at map at TelecomRddAnalysis.scala:178), which has no missing parents
+22/03/04 12:21:24 INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 5.4 KB, free 365.9 MB)
+22/03/04 12:21:24 INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 3.1 KB, free 365.9 MB)
+22/03/04 12:21:24 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 3.1 KB, free: 366.3 MB)
+22/03/04 12:21:24 INFO spark.SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:21:24 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[14] at map at TelecomRddAnalysis.scala:178) (first 15 tasks ar
+e for partitions Vector(0, 1, 2, 3))
+22/03/04 12:21:24 INFO cluster.YarnScheduler: Adding task set 6.0 with 4 tasks
+22/03/04 12:21:24 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 6.0 (TID 21, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 3, NODE_LOCAL, 7936 byt
+es)
+22/03/04 12:21:24 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33407 (size: 3.1 KB, free: 366.3 MB)
+22/03/04 12:21:25 INFO spark.ExecutorAllocationManager: Requesting 4 new executors because tasks are backlogged (new desired total will be 4)
+22/03/04 12:21:28 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 6.0 (TID 22, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 0, RACK_LOCAL, 7936 byt
+es)
+22/03/04 12:21:28 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 6.0 (TID 21) in 3534 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/4)
+22/03/04 12:21:28 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 6.0 (TID 23, ip-10-1-2-103.ap-south-1.compute.internal, executor 4, partition 1, RACK_LOCAL, 7936 byt
+es)
+22/03/04 12:21:28 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 6.0 (TID 24, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 2, RACK_LOCAL, 7936 byt
+es)
+22/03/04 12:21:28 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 3.1 KB, free: 366.3 MB)
+22/03/04 12:21:28 INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 3.1 KB, free: 366.3 MB)
+22/03/04 12:21:40 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 6.0 (TID 24) in 11349 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (2/4)
+22/03/04 12:21:40 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 6.0 (TID 22) in 11943 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (3/4)
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 6.0 (TID 23) in 13417 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 4) (4/4)
+22/03/04 12:21:42 INFO cluster.YarnScheduler: Removed TaskSet 6.0, whose tasks have all completed, from pool
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: ShuffleMapStage 6 (map at TelecomRddAnalysis.scala:178) finished in 17.336 s
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: running: Set()
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 7)
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: failed: Set()
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Submitting ResultStage 7 (ShuffledRDD[15] at reduceByKey at TelecomRddAnalysis.scala:179), which has no missing parents
+22/03/04 12:21:42 INFO memory.MemoryStore: Block broadcast_8 stored as values in memory (estimated size 3.3 KB, free 365.9 MB)
+22/03/04 12:21:42 INFO memory.MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 2007.0 B, free 365.9 MB)
+22/03/04 12:21:42 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 2007.0 B, free: 366.3 MB)
+22/03/04 12:21:42 INFO spark.SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ResultStage 7 (ShuffledRDD[15] at reduceByKey at TelecomRddAnalysis.scala:179) (first 15 tasks are
+ for partitions Vector(0, 1, 2, 3))
+22/03/04 12:21:42 INFO cluster.YarnScheduler: Adding task set 7.0 with 4 tasks
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 7.0 (TID 25, ip-10-1-2-103.ap-south-1.compute.internal, executor 3, partition 0, NODE_LOCAL, 7673 byt
+es)
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 7.0 (TID 26, ip-10-1-2-103.ap-south-1.compute.internal, executor 4, partition 1, NODE_LOCAL, 7673 byt
+es)
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 7.0 (TID 27, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 2, NODE_LOCAL, 7673 byt
+es)
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 7.0 (TID 28, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 3, NODE_LOCAL, 7673 byt
+es)
+22/03/04 12:21:42 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33797 (size: 2007.0 B, free: 366.3 MB)
+22/03/04 12:21:42 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33407 (size: 2007.0 B, free: 366.3 MB)
+22/03/04 12:21:42 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 2007.0 B, free: 366.3 MB)
+22/03/04 12:21:42 INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 2007.0 B, free: 366.3 MB)
+22/03/04 12:21:42 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.1.2.103:53480
+22/03/04 12:21:42 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.1.2.103:53574
+22/03/04 12:21:42 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.1.2.103:53800
+22/03/04 12:21:42 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.1.2.103:53604
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 7.0 (TID 27) in 476 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (1/4)
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 7.0 (TID 25) in 583 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 3) (2/4)
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 7.0 (TID 28) in 620 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (3/4)
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 7.0 (TID 26) in 656 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 4) (4/4)
+22/03/04 12:21:42 INFO cluster.YarnScheduler: Removed TaskSet 7.0, whose tasks have all completed, from pool
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: ResultStage 7 (collect at TelecomRddAnalysis.scala:180) finished in 0.671 s
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Job 6 finished: collect at TelecomRddAnalysis.scala:180, took 18.034328 s
+HTTP status values and its count:
+status code: 404, count: 227089
+status code: 412, count: 19
+status code: 200, count: 1157831
+status code: 304, count: 6330
+status code: 400, count: 23
+status code: 500, count: 3252
+status code: 301, count: 619
+status code: 401, count: 153
+status code: 501, count: 143
+status code: 405, count: 83
+status code: 206, count: 939929
+status code: 406, count: 53
+status code: 403, count: 2222
+status code: 303, count: 247
+22/03/04 12:21:42 INFO spark.SparkContext: Starting job: count at TelecomRddAnalysis.scala:197
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Registering RDD 17 (distinct at TelecomRddAnalysis.scala:196)
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Got job 7 (count at TelecomRddAnalysis.scala:197) with 4 output partitions
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Final stage: ResultStage 9 (count at TelecomRddAnalysis.scala:197)
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 8)
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 8)
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 8 (MapPartitionsRDD[17] at distinct at TelecomRddAnalysis.scala:196), which has no missing parents
+22/03/04 12:21:42 INFO memory.MemoryStore: Block broadcast_9 stored as values in memory (estimated size 5.2 KB, free 365.9 MB)
+22/03/04 12:21:42 INFO memory.MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 3.0 KB, free 365.9 MB)
+22/03/04 12:21:42 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 3.0 KB, free: 366.3 MB)
+22/03/04 12:21:42 INFO spark.SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:21:42 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 8 (MapPartitionsRDD[17] at distinct at TelecomRddAnalysis.scala:196) (first 15 tas
+ks are for partitions Vector(0, 1, 2, 3))
+22/03/04 12:21:42 INFO cluster.YarnScheduler: Adding task set 8.0 with 4 tasks
+22/03/04 12:21:42 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 8.0 (TID 29, ip-10-1-2-103.ap-south-1.compute.internal, executor 3, partition 3, NODE_LOCAL, 7936 byt
+es)
+22/03/04 12:21:42 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33797 (size: 3.0 KB, free: 366.3 MB)
+22/03/04 12:21:43 INFO spark.ExecutorAllocationManager: Requesting 3 new executors because tasks are backlogged (new desired total will be 4)
+22/03/04 12:21:46 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 8.0 (TID 30, ip-10-1-2-103.ap-south-1.compute.internal, executor 3, partition 0, RACK_LOCAL, 7936 byt
+es)
+22/03/04 12:21:46 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 8.0 (TID 29) in 3749 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 3) (1/4)
+22/03/04 12:21:46 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 8.0 (TID 31, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 1, RACK_LOCAL, 7936 byt
+es)
+22/03/04 12:21:46 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 8.0 (TID 32, ip-10-1-2-103.ap-south-1.compute.internal, executor 4, partition 2, RACK_LOCAL, 7936 byt
+es)
+22/03/04 12:21:46 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 3.0 KB, free: 366.3 MB)
+22/03/04 12:21:46 INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 3.0 KB, free: 366.3 MB)
+22/03/04 12:21:58 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 8.0 (TID 31) in 11451 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (2/4)
+22/03/04 12:21:59 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 8.0 (TID 30) in 12761 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 3) (3/4)
+22/03/04 12:22:00 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 8.0 (TID 32) in 13896 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 4) (4/4)
+22/03/04 12:22:00 INFO cluster.YarnScheduler: Removed TaskSet 8.0, whose tasks have all completed, from pool
+22/03/04 12:22:00 INFO scheduler.DAGScheduler: ShuffleMapStage 8 (distinct at TelecomRddAnalysis.scala:196) finished in 17.773 s
+22/03/04 12:22:00 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/03/04 12:22:00 INFO scheduler.DAGScheduler: running: Set()
+22/03/04 12:22:00 INFO scheduler.DAGScheduler: waiting: Set(ResultStage 9)
+22/03/04 12:22:00 INFO scheduler.DAGScheduler: failed: Set()
+22/03/04 12:22:00 INFO scheduler.DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[19] at distinct at TelecomRddAnalysis.scala:196), which has no missing parents
+22/03/04 12:22:00 INFO memory.MemoryStore: Block broadcast_10 stored as values in memory (estimated size 3.8 KB, free 365.9 MB)
+22/03/04 12:22:00 INFO memory.MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 2.3 KB, free 365.9 MB)
+22/03/04 12:22:00 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on ip-10-1-1-204.ap-south-1.compute.internal:42684 (size: 2.3 KB, free: 366.2 MB)
+22/03/04 12:22:00 INFO spark.SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1164
+22/03/04 12:22:00 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ResultStage 9 (MapPartitionsRDD[19] at distinct at TelecomRddAnalysis.scala:196) (first 15 tasks a
+re for partitions Vector(0, 1, 2, 3))
+22/03/04 12:22:00 INFO cluster.YarnScheduler: Adding task set 9.0 with 4 tasks
+22/03/04 12:22:00 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 9.0 (TID 33, ip-10-1-2-103.ap-south-1.compute.internal, executor 3, partition 0, NODE_LOCAL, 7673 byt
+es)
+22/03/04 12:22:00 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 9.0 (TID 34, ip-10-1-2-103.ap-south-1.compute.internal, executor 1, partition 1, NODE_LOCAL, 7673 byt
+es)
+22/03/04 12:22:00 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 9.0 (TID 35, ip-10-1-2-103.ap-south-1.compute.internal, executor 4, partition 2, NODE_LOCAL, 7673 byt
+es)
+22/03/04 12:22:00 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 9.0 (TID 36, ip-10-1-2-103.ap-south-1.compute.internal, executor 2, partition 3, NODE_LOCAL, 7673 byt
+es)
+22/03/04 12:22:00 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:44624 (size: 2.3 KB, free: 366.2 MB)
+22/03/04 12:22:00 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33787 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:22:00 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33797 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:22:00 INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on ip-10-1-2-103.ap-south-1.compute.internal:33407 (size: 2.3 KB, free: 366.3 MB)
+22/03/04 12:22:00 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.1.2.103:53574
+22/03/04 12:22:00 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.1.2.103:53480
+22/03/04 12:22:00 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.1.2.103:53604
+22/03/04 12:22:00 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.1.2.103:53800
+22/03/04 12:22:01 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 9.0 (TID 36) in 578 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 2) (1/4)
+22/03/04 12:22:01 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 9.0 (TID 34) in 643 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 1) (2/4)
+22/03/04 12:22:01 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 9.0 (TID 35) in 706 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 4) (3/4)
+22/03/04 12:22:01 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 9.0 (TID 33) in 760 ms on ip-10-1-2-103.ap-south-1.compute.internal (executor 3) (4/4)
+22/03/04 12:22:01 INFO cluster.YarnScheduler: Removed TaskSet 9.0, whose tasks have all completed, from pool
+22/03/04 12:22:01 INFO scheduler.DAGScheduler: ResultStage 9 (count at TelecomRddAnalysis.scala:197) finished in 0.775 s
+22/03/04 12:22:01 INFO scheduler.DAGScheduler: Job 7 finished: count at TelecomRddAnalysis.scala:197, took 18.557292 s
+Distinct hosts: 40836, average request per host: 57.25355078851993
+22/03/04 12:22:01 INFO spark.SparkContext: Invoking stop() from shutdown hook
+22/03/04 12:22:01 INFO cluster.YarnClientSchedulerBackend: Interrupting monitor thread
+22/03/04 12:22:01 INFO cluster.YarnClientSchedulerBackend: Shutting down all executors
+22/03/04 12:22:01 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+22/03/04 12:22:01 INFO cluster.SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+22/03/04 12:22:01 INFO cluster.YarnClientSchedulerBackend: Stopped
+22/03/04 12:22:01 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+22/03/04 12:22:01 INFO memory.MemoryStore: MemoryStore cleared
+22/03/04 12:22:01 INFO storage.BlockManager: BlockManager stopped
+22/03/04 12:22:01 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+22/03/04 12:22:01 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+22/03/04 12:22:01 INFO spark.SparkContext: Successfully stopped SparkContext
+22/03/04 12:22:01 INFO util.ShutdownHookManager: Shutdown hook called
+22/03/04 12:22:01 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-aeb27d8c-4bd6-4a68-9c35-e4a05dfe0823
+22/03/04 12:22:01 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-05813335-f6c2-4e0e-8d39-520252fe67bd
