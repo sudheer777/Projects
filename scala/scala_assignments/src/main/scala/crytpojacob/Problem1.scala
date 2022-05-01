@@ -73,19 +73,6 @@ object Problem1 {
   // val df = jdbc.toDataFrame(sqlContext, query)
   // println(df.count())
   //df.show()
-  val query = """
-SELECT id as Id
-	,custrecord_absence_employee as EmployeeId
-	,BUILTIN.DF(custrecord_absence_employee) as Employee
-	,custrecord_absence_startdate as StartDate
-	,custrecord_absence_enddate as EndDate
-	,custrecord_absence_duration as DurationDays
-	,custrecord146 as WorkOrderId
-	,custrecord_absence_comments as Comments
-	,BUILTIN.DF(custrecord_absence_status) as Status
-	,BUILTIN.DF(custrecord_absence_type) AS Type
-FROM CUSTOMRECORD_ABSENCE
-"""
   // val df = jdbc.toDataFrame(sqlContext, query)
   // println(df.count())
   //df.show()

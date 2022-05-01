@@ -8,6 +8,11 @@ scalaVersion := "2.12.8"
 libraryDependencies += "org.apache.spark" %% "spark-core" % "2.4.4"
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.4"
 
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
+
+libraryDependencies += "junit" % "junit" % "4.11" % Test
+
+
 assemblyMergeStrategy in assembly := {
   case PathList("org", "apache", _@_*) => MergeStrategy.last
   case PathList("com", "databricks", _@_*) => MergeStrategy.last
